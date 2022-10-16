@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Pandas—excel自动化办公实用代码 | Lovers 的博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/lzmblog/lzmblog/favicon.ico">
+    <link rel="stylesheet" href="/lzmblog/style.css">
+    <meta name="description" content="个人博客">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/lzmblog/assets/css/0.styles.34e16441.css" as="style"><link rel="preload" href="/lzmblog/assets/js/app.f6582fa6.js" as="script"><link rel="preload" href="/lzmblog/assets/js/7.f579b280.js" as="script"><link rel="preload" href="/lzmblog/assets/js/26.d9e15335.js" as="script"><link rel="prefetch" href="/lzmblog/assets/js/10.7063497e.js"><link rel="prefetch" href="/lzmblog/assets/js/11.c077aed5.js"><link rel="prefetch" href="/lzmblog/assets/js/12.3dc9bdbf.js"><link rel="prefetch" href="/lzmblog/assets/js/13.8c8bc62d.js"><link rel="prefetch" href="/lzmblog/assets/js/14.158e06d6.js"><link rel="prefetch" href="/lzmblog/assets/js/15.5cfac5ee.js"><link rel="prefetch" href="/lzmblog/assets/js/16.87fbfa73.js"><link rel="prefetch" href="/lzmblog/assets/js/17.7c036072.js"><link rel="prefetch" href="/lzmblog/assets/js/18.82e55eab.js"><link rel="prefetch" href="/lzmblog/assets/js/19.9dff5288.js"><link rel="prefetch" href="/lzmblog/assets/js/2.672cc620.js"><link rel="prefetch" href="/lzmblog/assets/js/20.a3f1c967.js"><link rel="prefetch" href="/lzmblog/assets/js/21.3ff5f263.js"><link rel="prefetch" href="/lzmblog/assets/js/22.89c469f1.js"><link rel="prefetch" href="/lzmblog/assets/js/23.38743dcf.js"><link rel="prefetch" href="/lzmblog/assets/js/24.6bcac6e8.js"><link rel="prefetch" href="/lzmblog/assets/js/25.28974017.js"><link rel="prefetch" href="/lzmblog/assets/js/27.8a39c8f2.js"><link rel="prefetch" href="/lzmblog/assets/js/28.a01661e8.js"><link rel="prefetch" href="/lzmblog/assets/js/29.a4a5406a.js"><link rel="prefetch" href="/lzmblog/assets/js/3.0e874f07.js"><link rel="prefetch" href="/lzmblog/assets/js/30.355f61f5.js"><link rel="prefetch" href="/lzmblog/assets/js/31.4e589136.js"><link rel="prefetch" href="/lzmblog/assets/js/32.0a74b181.js"><link rel="prefetch" href="/lzmblog/assets/js/33.1f0a784e.js"><link rel="prefetch" href="/lzmblog/assets/js/34.13798fc1.js"><link rel="prefetch" href="/lzmblog/assets/js/35.ce17e3ed.js"><link rel="prefetch" href="/lzmblog/assets/js/36.bafc423d.js"><link rel="prefetch" href="/lzmblog/assets/js/37.25f39385.js"><link rel="prefetch" href="/lzmblog/assets/js/38.c4bf83e1.js"><link rel="prefetch" href="/lzmblog/assets/js/39.1c904ce9.js"><link rel="prefetch" href="/lzmblog/assets/js/4.393c1c4d.js"><link rel="prefetch" href="/lzmblog/assets/js/5.f28696c6.js"><link rel="prefetch" href="/lzmblog/assets/js/6.22e81d8d.js"><link rel="prefetch" href="/lzmblog/assets/js/8.bfecf23e.js"><link rel="prefetch" href="/lzmblog/assets/js/9.3b6d93a9.js">
+    <link rel="stylesheet" href="/lzmblog/assets/css/0.styles.34e16441.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="global-layout" data-v-7f2e4136><header class="header-container" style="background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:scroll;background-image:url(/lzmblog/post-bg.jpeg);" data-v-93921ff8 data-v-7f2e4136><nav class="navbar" style="position:absolute;opacity:1;transition:all 0.5s ease-in-out;" data-v-93921ff8><a href="/lzmblog/" class="navbar-link router-link-active">
+    Lovers Blog
+  </a> <ul class="navbar-links"><li><a href="/lzmblog/" class="router-link-active">
+        HOME
+      </a></li><li><a href="/lzmblog/about/">
+        ABOUT
+      </a></li><li><a href="/lzmblog/tags/">
+        TAGS
+      </a></li></ul> <div id="nav-icon"><span></span><span></span><span></span></div></nav> <div class="header-title" data-v-93921ff8 data-v-93921ff8><h1 data-v-93921ff8>Pandas—excel自动化办公实用代码</h1> <p data-v-93921ff8></p></div></header> <div class="container" data-v-b3fda33c data-v-7f2e4136><main class="main" style="width:60%;" data-v-b3fda33c><div class="post" data-v-b3fda33c data-v-b3fda33c><article class="main-div"><div class="post-content content content__default"><h1 id="pandas-excel自动化办公实用代码"><a href="#pandas-excel自动化办公实用代码" class="header-anchor">#</a> Pandas—excel自动化办公实用代码</h1> <h1 id="自动化办公实现以下功能"><a href="#自动化办公实现以下功能" class="header-anchor">#</a> <em>自动化办公实现以下功能：</em></h1> <h2 id="_1-实现批量导入csv、excel-并导入到一个整表"><a href="#_1-实现批量导入csv、excel-并导入到一个整表" class="header-anchor">#</a> 1.实现批量导入csv、excel，并导入到一个整表</h2> <h3 id="_1-1-csv"><a href="#_1-1-csv" class="header-anchor">#</a> 1.1 csv</h3> <div class="language-python extra-class"><pre class="language-python"><code>data_list <span class="token operator">=</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span><span class="token string">'../data/'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token comment">#文件目录路径</span>
+df_all <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> data_list<span class="token punctuation">:</span>
+    df_one <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'../data/</span><span class="token interpolation"><span class="token punctuation">{</span>i<span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">,</span> engine<span class="token operator">=</span><span class="token string">'python'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">,</span> index_col<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>  
+    df_all <span class="token operator">=</span> df_all<span class="token punctuation">.</span>append<span class="token punctuation">(</span>df_one<span class="token punctuation">,</span> ignore_index<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token comment">#ignore_index：默认值为False，如果为True则不使用index标签</span>
+df_all<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="_1-2-excel"><a href="#_1-2-excel" class="header-anchor">#</a> 1.2 excel</h3> <div class="language-python extra-class"><pre class="language-python"><code><span class="token comment">#建议使用绝对路径，也可以使用灵活的相对路径</span>
+path <span class="token operator">=</span> <span class="token string">'Path/'</span><span class="token comment">#文件目录路径</span>
+df_all <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> excel_name <span class="token keyword">in</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment">#这里面的path参数可写可不写</span>
+    <span class="token comment">#必须添加该判断条件，否则必报错</span>
+    <span class="token keyword">if</span> <span class="token string">'.xlsx'</span> <span class="token keyword">not</span> <span class="token keyword">in</span> excel_name<span class="token punctuation">:</span>
+        <span class="token keyword">continue</span>
+    df_one <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span>path<span class="token operator">+</span><span class="token string-interpolation"><span class="token string">f'</span><span class="token interpolation"><span class="token punctuation">{</span>excel_name<span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">)</span> <span class="token comment">#这里的path参数不可以省略</span>
+    df <span class="token operator">=</span> df_all<span class="token punctuation">.</span>append<span class="token punctuation">(</span>df_one<span class="token punctuation">)</span>
+df<span class="token punctuation">.</span>to_excel<span class="token punctuation">(</span>path<span class="token operator">+</span><span class="token string">'datalist.xlsx'</span><span class="token punctuation">,</span>index<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token comment">#index=False，不需要索引，一般都要写</span>
+</code></pre></div><h2 id="_2-压缩图片"><a href="#_2-压缩图片" class="header-anchor">#</a> 2.压缩图片</h2> <h2 id="_3-统一字段-得到总表"><a href="#_3-统一字段-得到总表" class="header-anchor">#</a> 3.统一字段，得到总表</h2> <h2 id="_4-对总表进行相关汇总操作-得到汇总表-并添加相关图片"><a href="#_4-对总表进行相关汇总操作-得到汇总表-并添加相关图片" class="header-anchor">#</a> 4.对总表进行相关汇总操作，得到汇总表，并添加相关图片</h2> <p><strong>相关测试数据集：</strong> <a href="https://pan.baidu.com/s/1z5CjQ6N9SC244RFmzTZcIg" target="_blank" rel="noopener noreferrer">链接：https://pan.baidu.com/s/1z5CjQ6N9SC244RFmzTZcIg
+提取码：love
+复制这段内容后打开百度网盘手机App，操作更方便哦<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><strong>源代码：</strong></p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token triple-quoted-string string">'''
+读取文件夹内的所有表格, 合并成一个表
+:param folder: 文件夹路径
+:return: DataFrame
+'''</span>
+
+<span class="token triple-quoted-string string">'''
+函数：
+use_time
+wrapper
+save_image_to_excel
+
+'''</span>
+<span class="token triple-quoted-string string">'''
+基本信息：
+file_path   文件路径
+picture_path    图片路径
+columns     选择哪一列
+sheet_name     选择sheet表,从0开始  （sheet_index已改为sheet_name）
+
+
+'''</span>
+<span class="token triple-quoted-string string">&quot;&quot;&quot;
+输出
+/Users/Yi/我的python教程/pandas办公自动化_备课/data_out/2019全平台销售总表.xlsx
+&quot;&quot;&quot;</span>
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> os
+<span class="token keyword">import</span> sys
+<span class="token keyword">from</span> time <span class="token keyword">import</span> time
+<span class="token keyword">from</span> openpyxl <span class="token keyword">import</span> load_workbook
+<span class="token keyword">from</span> openpyxl<span class="token punctuation">.</span>drawing<span class="token punctuation">.</span>image <span class="token keyword">import</span> Image
+
+pd<span class="token punctuation">.</span>options<span class="token punctuation">.</span>display<span class="token punctuation">.</span>max_columns <span class="token operator">=</span> <span class="token number">888</span>
+pd<span class="token punctuation">.</span>options<span class="token punctuation">.</span>display<span class="token punctuation">.</span>max_rows <span class="token operator">=</span> <span class="token number">888</span>
+<span class="token comment">#构建统一的字段 根据京东和淘宝表格合并</span>
+out_xlsx_title_1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'货号'</span><span class="token punctuation">,</span> <span class="token string">'商品名称'</span><span class="token punctuation">,</span> <span class="token string">'图片'</span><span class="token punctuation">,</span> <span class="token string">'尺码'</span><span class="token punctuation">,</span> <span class="token string">'日期'</span><span class="token punctuation">,</span> <span class="token string">'售卖价'</span><span class="token punctuation">,</span>
+                    <span class="token string">'实收金额'</span><span class="token punctuation">,</span> <span class="token string">'销售量_含拒退'</span><span class="token punctuation">,</span> <span class="token string">'销售量_不含拒退'</span><span class="token punctuation">,</span>
+                    <span class="token string">'平台'</span><span class="token punctuation">,</span>
+                    <span class="token string">'品牌'</span><span class="token punctuation">,</span> <span class="token string">'成本'</span><span class="token punctuation">,</span> <span class="token string">'季节'</span><span class="token punctuation">,</span> <span class="token string">'商品年份'</span><span class="token punctuation">]</span>
+
+
+<span class="token comment"># 函数运行时间装饰器</span>
+<span class="token keyword">def</span> <span class="token function">use_time</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        start <span class="token operator">=</span> time<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        result <span class="token operator">=</span> func<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+        use <span class="token operator">=</span> <span class="token builtin">round</span><span class="token punctuation">(</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> start<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'%s()用时: %s秒'</span> <span class="token operator">%</span> <span class="token punctuation">(</span>func<span class="token punctuation">.</span>__name__<span class="token punctuation">,</span> use<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> result
+
+    <span class="token keyword">return</span> wrapper
+
+
+<span class="token comment"># 向 excel 插入图片</span>
+<span class="token keyword">def</span> <span class="token function">save_image_to_excel</span><span class="token punctuation">(</span>file_path<span class="token punctuation">,</span> picture_path<span class="token punctuation">,</span> columns<span class="token punctuation">,</span> sheet_name<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    把图片插入到xlsx
+    :param file_path: 文件路径
+    :param picture_path: 图片路径
+    :param columns: 2D_list, [[0, B], [2, D]]表示: 依据第0列, 插入到到B列; 依据第2列, 插入到到D列
+    :param sheet_name: 选择sheet, 从0开现
+    :return: None
+    &quot;&quot;&quot;</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'插入图片...'</span><span class="token punctuation">)</span>
+    <span class="token comment"># img_path = '//80.1.4.184/g/data/picture/X89113078049.png'</span>
+    <span class="token comment"># wb = load_workbook(r'G:\yi\yi_code\hxfs_data_y\my_module\1.xlsx')</span>
+    df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span>file_path<span class="token punctuation">,</span> sheet_name<span class="token operator">=</span>sheet_name<span class="token punctuation">)</span>
+    wb <span class="token operator">=</span> load_workbook<span class="token punctuation">(</span>file_path<span class="token punctuation">)</span>
+    ws <span class="token operator">=</span> wb<span class="token punctuation">.</span>worksheets<span class="token punctuation">[</span>sheet_name<span class="token punctuation">]</span>
+    <span class="token keyword">for</span> depend_col<span class="token punctuation">,</span> insert_col <span class="token keyword">in</span> columns<span class="token punctuation">:</span>
+        depend_list <span class="token operator">=</span> df<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> depend_col<span class="token punctuation">]</span><span class="token punctuation">.</span>tolist<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> idx<span class="token punctuation">,</span> pic_name <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>depend_list<span class="token punctuation">,</span> start<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">try</span><span class="token punctuation">:</span>
+                img <span class="token operator">=</span> Image<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>picture_path<span class="token punctuation">,</span> pic_name <span class="token operator">+</span> <span class="token string">'.jpg'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">except</span><span class="token punctuation">:</span>
+                <span class="token keyword">try</span><span class="token punctuation">:</span>
+                    img <span class="token operator">=</span> Image<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>picture_path<span class="token punctuation">,</span> pic_name <span class="token operator">+</span> <span class="token string">'.png'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token keyword">except</span><span class="token punctuation">:</span>
+                    <span class="token keyword">continue</span>
+            anchor <span class="token operator">=</span> insert_col <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>idx <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+            ws<span class="token punctuation">.</span>add_image<span class="token punctuation">(</span>img<span class="token punctuation">,</span> anchor<span class="token operator">=</span>anchor<span class="token punctuation">)</span>
+    wb<span class="token punctuation">.</span>save<span class="token punctuation">(</span>file_path<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'插入图片完成'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># #方法2</span>
+<span class="token comment"># path = 'D:/下载/Pandas_A001_G004/A001_课程简介/PlatformA/'#文件目录路径</span>
+<span class="token comment"># df_all = pd.DataFrame()</span>
+<span class="token comment"># for excel_name in os.listdir(path):</span>
+<span class="token comment">#     if '.xlsx' not in excel_name:</span>
+<span class="token comment">#         continue</span>
+<span class="token comment">#     df_one = pd.read_excel(path+f'{excel_name}')</span>
+<span class="token comment">#     df = df_all.append(df_one)</span>
+<span class="token comment"># df.to_excel(path+'datalist.xlsx',index=False)</span>
+
+<span class="token keyword">def</span> <span class="token function">concat_files</span><span class="token punctuation">(</span>folder<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    读取文件夹内的所有表格, 合并成一个表
+    :param folder: 文件夹路径
+    :return: DataFrame
+    &quot;&quot;&quot;</span>
+    df_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> fn <span class="token keyword">in</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>folder<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        ffn <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>folder<span class="token punctuation">,</span> fn<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token string">'.xlsx'</span> <span class="token keyword">not</span> <span class="token keyword">in</span> ffn<span class="token punctuation">:</span>
+            <span class="token keyword">continue</span>
+        <span class="token comment"># print(ffn)</span>
+        df_temp <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span>ffn<span class="token punctuation">)</span>
+        df_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span>df_temp<span class="token punctuation">)</span>
+    df <span class="token operator">=</span> pd<span class="token punctuation">.</span>concat<span class="token punctuation">(</span>df_list<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> df
+
+
+<span class="token comment"># ['货号', '商品名称', '尺码', '日期', '售卖价', '实收金额', '销售量_含拒退', '销售量_不含拒退']</span>
+<span class="token keyword">def</span> <span class="token function">read_sales_b</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    ['款号颜色代码', '商品名称', '尺码', '日期', '售卖价', '活动价', '销售量_含拒退', '销售量_不含拒退']
+    &quot;&quot;&quot;</span>
+    df_b <span class="token operator">=</span> concat_files<span class="token punctuation">(</span>
+        <span class="token string">'./PlatformB'</span>
+    <span class="token punctuation">)</span>
+    df_b<span class="token punctuation">[</span><span class="token string">'实收金额'</span><span class="token punctuation">]</span> <span class="token operator">=</span> np<span class="token punctuation">.</span>where<span class="token punctuation">(</span>df_b<span class="token punctuation">[</span><span class="token string">'活动价'</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">,</span> df_b<span class="token punctuation">[</span><span class="token string">'售卖价'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> df_b<span class="token punctuation">[</span><span class="token string">'活动价'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    df_b <span class="token operator">=</span> df_b<span class="token punctuation">.</span>rename<span class="token punctuation">(</span>columns<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'款号颜色代码'</span><span class="token punctuation">:</span> <span class="token string">'货号'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+    df_b <span class="token operator">=</span> df_b<span class="token punctuation">.</span>drop<span class="token punctuation">(</span>columns<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'活动价'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> df_b
+
+
+<span class="token decorator annotation punctuation">@use_time</span>
+<span class="token keyword">def</span> <span class="token function">out_sales_summary_tb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'输出&quot;2019全平台销售总表.xlsx&quot;...'</span><span class="token punctuation">)</span>
+    df_a <span class="token operator">=</span> concat_files<span class="token punctuation">(</span><span class="token string">'./PlatformA'</span><span class="token punctuation">)</span>
+    df_a<span class="token punctuation">[</span><span class="token string">'平台'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'平台A'</span>
+    df_b <span class="token operator">=</span> read_sales_b<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    df_b<span class="token punctuation">[</span><span class="token string">'平台'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'平台B'</span>
+    df_all <span class="token operator">=</span> df_a<span class="token punctuation">.</span>append<span class="token punctuation">(</span>df_b<span class="token punctuation">)</span>
+    <span class="token comment"># ['售卖价', '商品名称', '实收金额', '尺码', '平台',</span>
+    <span class="token comment"># '日期', '货号', '销售量_不含拒退', '销售量_含拒退']</span>
+    <span class="token comment"># print(df_all.head())</span>
+    df_base <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span>
+        <span class="token string">'商品基础信息表.xlsx'</span><span class="token punctuation">,</span>
+        usecols<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'货号'</span><span class="token punctuation">,</span> <span class="token string">'品牌'</span><span class="token punctuation">,</span> <span class="token string">'成本'</span><span class="token punctuation">,</span> <span class="token string">'季节'</span><span class="token punctuation">,</span> <span class="token string">'商品年份'</span><span class="token punctuation">]</span>
+    <span class="token punctuation">)</span>
+    df_all <span class="token operator">=</span> pd<span class="token punctuation">.</span>merge<span class="token punctuation">(</span>df_all<span class="token punctuation">,</span> df_base<span class="token punctuation">,</span> on<span class="token operator">=</span><span class="token string">'货号'</span><span class="token punctuation">,</span> how<span class="token operator">=</span><span class="token string">'left'</span><span class="token punctuation">,</span>
+                      validate<span class="token operator">=</span><span class="token string">'many_to_one'</span><span class="token punctuation">)</span>
+    df_all<span class="token punctuation">[</span><span class="token string">'日期'</span><span class="token punctuation">]</span> <span class="token operator">=</span> df_all<span class="token punctuation">[</span><span class="token string">'日期'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>dt<span class="token punctuation">.</span>date
+    <span class="token comment"># print(df_all.head())</span>
+
+    df_all<span class="token punctuation">.</span>to_excel<span class="token punctuation">(</span><span class="token string">'./data_out/2019全平台销售总表.xlsx'</span><span class="token punctuation">,</span> index<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span>
+    <span class="token comment"># df_all.to_pickle('./data_out/2019全平台销售总表.pkl')</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'输出&quot;2019全平台销售总表.xlsx&quot;完成'</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">'\n**********\n'</span><span class="token punctuation">)</span>
+
+
+<span class="token comment"># 压缩图片</span>
+<span class="token decorator annotation punctuation">@use_time</span>
+<span class="token keyword">def</span> <span class="token function">compress_image</span><span class="token punctuation">(</span>src_path<span class="token punctuation">,</span> dst_path<span class="token punctuation">,</span> w<span class="token operator">=</span><span class="token number">80</span><span class="token punctuation">,</span> h<span class="token operator">=</span><span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'压缩图片...'</span><span class="token punctuation">)</span>
+    src_fn_set <span class="token operator">=</span> <span class="token builtin">set</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>src_path<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    dst_fn_set <span class="token operator">=</span> <span class="token builtin">set</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>dst_path<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    fn_set <span class="token operator">=</span> src_fn_set <span class="token operator">-</span> dst_fn_set
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>fn_set<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'无可更新图片'</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">'\n**********\n'</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span>
+
+    <span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
+    <span class="token keyword">for</span> fn <span class="token keyword">in</span> fn_set<span class="token punctuation">:</span>
+        src_ffn <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>src_path<span class="token punctuation">,</span> fn<span class="token punctuation">)</span>
+        dst_ffn <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>dst_path<span class="token punctuation">,</span> fn<span class="token punctuation">)</span>
+
+        larger_img <span class="token operator">=</span> Image<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>src_ffn<span class="token punctuation">)</span>
+        small_img <span class="token operator">=</span> larger_img<span class="token punctuation">.</span>resize<span class="token punctuation">(</span><span class="token punctuation">(</span>w<span class="token punctuation">,</span> h<span class="token punctuation">)</span><span class="token punctuation">,</span> resample<span class="token operator">=</span>Image<span class="token punctuation">.</span>ANTIALIAS<span class="token punctuation">)</span>
+        small_img<span class="token punctuation">.</span>save<span class="token punctuation">(</span>dst_ffn<span class="token punctuation">)</span>
+
+        <span class="token keyword">print</span><span class="token punctuation">(</span>src_ffn<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>dst_ffn<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'压缩图片完成'</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">'\n**********\n'</span><span class="token punctuation">)</span>
+
+
+<span class="token triple-quoted-string string">&quot;&quot;&quot;
+输出
+./data_out/2019销售汇总表.xlsx
+&quot;&quot;&quot;</span>
+out_xlsx_title <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'货号'</span><span class="token punctuation">,</span> <span class="token string">'商品名称'</span><span class="token punctuation">,</span> <span class="token string">'图片'</span><span class="token punctuation">,</span> <span class="token string">'总销量'</span><span class="token punctuation">,</span> <span class="token string">'总销售额'</span><span class="token punctuation">,</span>
+                  <span class="token string">'总成本'</span><span class="token punctuation">,</span> <span class="token string">'总利润'</span><span class="token punctuation">]</span>
+
+
+<span class="token decorator annotation punctuation">@use_time</span>
+<span class="token keyword">def</span> <span class="token function">out_goods_id_total</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'输出&quot;2019销售汇总表.xlsx&quot;...'</span><span class="token punctuation">)</span>
+    <span class="token comment"># df = pd.read_pickle('./data_out/2019全平台销售总表.pkl')</span>
+    df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span><span class="token string">'./data_out/2019全平台销售总表.xlsx'</span><span class="token punctuation">)</span>
+    <span class="token comment"># print(df.head())</span>
+    df <span class="token operator">=</span> df<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'货号'</span><span class="token punctuation">,</span> <span class="token string">'商品名称'</span><span class="token punctuation">,</span> <span class="token string">'实收金额'</span><span class="token punctuation">,</span> <span class="token string">'销售量_不含拒退'</span><span class="token punctuation">,</span> <span class="token string">'成本'</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+    df <span class="token operator">=</span> df<span class="token punctuation">.</span>rename<span class="token punctuation">(</span>columns<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'销售量_不含拒退'</span><span class="token punctuation">:</span> <span class="token string">'总销量'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+    df<span class="token punctuation">[</span><span class="token string">'总销售额'</span><span class="token punctuation">]</span> <span class="token operator">=</span> df<span class="token punctuation">[</span><span class="token string">'实收金额'</span><span class="token punctuation">]</span> <span class="token operator">*</span> df<span class="token punctuation">[</span><span class="token string">'总销量'</span><span class="token punctuation">]</span>
+    df <span class="token operator">=</span> pd<span class="token punctuation">.</span>pivot_table<span class="token punctuation">(</span>
+        df<span class="token punctuation">,</span>
+        index<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'货号'</span><span class="token punctuation">,</span> <span class="token string">'商品名称'</span><span class="token punctuation">,</span> <span class="token string">'成本'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        values<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'总销量'</span><span class="token punctuation">,</span> <span class="token string">'总销售额'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        aggfunc<span class="token operator">=</span><span class="token builtin">sum</span><span class="token punctuation">)</span>
+    df <span class="token operator">=</span> df<span class="token punctuation">.</span>reset_index<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    df<span class="token punctuation">[</span><span class="token string">'总成本'</span><span class="token punctuation">]</span> <span class="token operator">=</span> df<span class="token punctuation">[</span><span class="token string">'总销量'</span><span class="token punctuation">]</span> <span class="token operator">*</span> df<span class="token punctuation">[</span><span class="token string">'成本'</span><span class="token punctuation">]</span>
+    df<span class="token punctuation">[</span><span class="token string">'总利润'</span><span class="token punctuation">]</span> <span class="token operator">=</span> df<span class="token punctuation">[</span><span class="token string">'总销售额'</span><span class="token punctuation">]</span> <span class="token operator">-</span> df<span class="token punctuation">[</span><span class="token string">'总成本'</span><span class="token punctuation">]</span>
+
+    total_series <span class="token operator">=</span> df<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'总销量'</span><span class="token punctuation">,</span> <span class="token string">'总销售额'</span><span class="token punctuation">,</span> <span class="token string">'总成本'</span><span class="token punctuation">,</span> <span class="token string">'总利润'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">.</span>reindex<span class="token punctuation">(</span>out_xlsx_title<span class="token punctuation">)</span>
+    total_series<span class="token punctuation">[</span><span class="token string">'货号'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'合计'</span>
+    <span class="token comment"># print(total_series)</span>
+    <span class="token comment"># return</span>
+    df <span class="token operator">=</span> df<span class="token punctuation">.</span>append<span class="token punctuation">(</span>total_series<span class="token punctuation">,</span> ignore_index<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+    df <span class="token operator">=</span> df<span class="token punctuation">.</span>reindex<span class="token punctuation">(</span>columns<span class="token operator">=</span>out_xlsx_title<span class="token punctuation">)</span>
+    <span class="token comment"># print(df)</span>
+    ffn <span class="token operator">=</span> <span class="token string">'./data_out/2019销售汇总表.xlsx'</span>
+    df<span class="token punctuation">.</span>to_excel<span class="token punctuation">(</span>ffn<span class="token punctuation">,</span> index<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span>
+    <span class="token comment"># 插入图片</span>
+    picture_path <span class="token operator">=</span> <span class="token string">'./压缩图'</span>
+    save_image_to_excel<span class="token punctuation">(</span>ffn<span class="token punctuation">,</span> picture_path<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">'C'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'输出&quot;2019销售汇总表.xlsx&quot;完成'</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">'\n**********\n'</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    <span class="token comment"># 1: 压缩图片</span>
+    compress_image<span class="token punctuation">(</span><span class="token string">'./原图'</span><span class="token punctuation">,</span> <span class="token string">'./压缩图'</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 2: 输出&quot;2019全平台销售总表.xlsx&quot;</span>
+    <span class="token comment"># out_sales_summary_tb()</span>
+
+    <span class="token comment"># 3: 输出&quot;2019销售汇总表.xlsx&quot;</span>
+    <span class="token comment"># out_goods_id_total()</span>
+
+</code></pre></div></div></article> <div class="main-div vssue"><!----></div></div></main> <aside class="aside" data-v-b3fda33c data-v-b3fda33c><div class="info-card main-div" data-v-1311ce9e data-v-b3fda33c><div class="info-card-header" style="background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:scroll;background-image:url(/lzmblog/me.png);" data-v-1311ce9e><img src="/lzmblog/logo.jpg" alt="lzmlovers" class="info-avatar" data-v-1311ce9e></div> <div class="info-card-body" data-v-1311ce9e><section class="info-name" data-v-1311ce9e>
+      lzmlovers
+    </section> <section class="info-desc" data-v-1311ce9e>Tomorrow will be better<br/>明天会更好</section> <section class="info-contact" data-v-1311ce9e><section data-v-1311ce9e><span data-v-1311ce9e data-v-1311ce9e><svg class="icon" style="font-size:1em;" data-v-1311ce9e data-v-1311ce9e><use xlink:href="#icon-location" data-v-1311ce9e data-v-1311ce9e></use></svg><span class="info-text" data-v-1311ce9e data-v-1311ce9e>
+          YongZhou, China
+        </span></span></section> <!----> <section data-v-1311ce9e><span data-v-1311ce9e data-v-1311ce9e><svg class="icon" style="font-size:1em;" data-v-1311ce9e data-v-1311ce9e><use xlink:href="#icon-email" data-v-1311ce9e data-v-1311ce9e></use></svg><span class="info-text" data-v-1311ce9e data-v-1311ce9e>
+          2095793572@qq.com
+        </span></span></section></section></div> <div class="info-card-footer" data-v-1311ce9e><p class="footer-sns-link" data-v-1311ce9e><a target="_blank" href="https://blog.csdn.net/qq_44760912" class="sns-link" data-v-1311ce9e><span class="sns-icon" data-v-1311ce9e data-v-1311ce9e><svg class="icon" style="font-size:35px;" data-v-1311ce9e data-v-1311ce9e><use xlink:href="#icon-csdn" data-v-1311ce9e data-v-1311ce9e></use></svg></span></a><a target="_blank" href="https://weibo.com/u/7747087955" class="sns-link" data-v-1311ce9e><span class="sns-icon" data-v-1311ce9e data-v-1311ce9e><svg class="icon" style="font-size:35px;" data-v-1311ce9e data-v-1311ce9e><use xlink:href="#icon-weibo" data-v-1311ce9e data-v-1311ce9e></use></svg></span></a><a target="_blank" href="https://www.zhihu.com/people/xiao-zhu-wen-wen-ti" class="sns-link" data-v-1311ce9e><span class="sns-icon" data-v-1311ce9e data-v-1311ce9e><svg class="icon" style="font-size:35px;" data-v-1311ce9e data-v-1311ce9e><use xlink:href="#icon-zhihu" data-v-1311ce9e data-v-1311ce9e></use></svg></span></a><a target="_blank" href="https://github.com/git123hub121" class="sns-link" data-v-1311ce9e><span class="sns-icon" data-v-1311ce9e data-v-1311ce9e><svg class="icon" style="font-size:35px;" data-v-1311ce9e data-v-1311ce9e><use xlink:href="#icon-github" data-v-1311ce9e data-v-1311ce9e></use></svg></span></a></p></div></div> <div class="post-toc main-div aside-toc" style="position:relative;top:0;width:0px;" data-v-b3fda33c><h4>- CATALOG</h4> <div class="post-nav-toc"><ul><li><a href="/lzmblog/posts/2020/12/14/pandas-excel%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81.html#_1-实现批量导入csv、excel-并导入到一个整表">1.实现批量导入csv、excel，并导入到一个整表</a><ul><li><a href="/lzmblog/posts/2020/12/14/pandas-excel%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81.html#_1-1-csv">1.1 csv</a></li><li><a href="/lzmblog/posts/2020/12/14/pandas-excel%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81.html#_1-2-excel">1.2 excel</a></li></ul></li><li><a href="/lzmblog/posts/2020/12/14/pandas-excel%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81.html#_2-压缩图片">2.压缩图片</a></li><li><a href="/lzmblog/posts/2020/12/14/pandas-excel%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81.html#_3-统一字段-得到总表">3.统一字段，得到总表</a></li><li><a href="/lzmblog/posts/2020/12/14/pandas-excel%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC%E5%AE%9E%E7%94%A8%E4%BB%A3%E7%A0%81.html#_4-对总表进行相关汇总操作-得到汇总表-并添加相关图片">4.对总表进行相关汇总操作，得到汇总表，并添加相关图片</a></li></ul></div></div></aside></div> <footer class="footer" data-v-7f2e4136><p class="footer-sns-link"><a target="_blank" href="https://blog.csdn.net/qq_44760912" class="sns-link"><span class="sns-icon"><svg class="icon" style="font-size:40px;"><use xlink:href="#icon-csdn"></use></svg></span></a><a target="_blank" href="https://weibo.com/u/7747087955" class="sns-link"><span class="sns-icon"><svg class="icon" style="font-size:40px;"><use xlink:href="#icon-weibo"></use></svg></span></a><a target="_blank" href="https://www.zhihu.com/people/xiao-zhu-wen-wen-ti" class="sns-link"><span class="sns-icon"><svg class="icon" style="font-size:40px;"><use xlink:href="#icon-zhihu"></use></svg></span></a><a target="_blank" href="https://github.com/git123hub121" class="sns-link"><span class="sns-icon"><svg class="icon" style="font-size:40px;"><use xlink:href="#icon-github"></use></svg></span></a></p> <div class="copyright"><span id="custom">Copyright &copy; Lovers Blog 2022 | <a href="https://www.vuepress.cn/" target="_blank">VuePress</a></span> <iframe src="https://ghbtns.com/github-btn.html?user=youdeliang&amp;repo=vuepress-theme-melodydl&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="80px" height="20px" class="footer-btn" style="margin-left: 2px; margin-bottom:-5px;"></iframe></div></footer></div><div class="global-ui"><!----><!----><canvas id="vuepress-canvas-ribbon"></canvas><canvas id="vuepress-canvas-cursor"></canvas><div></div><div class="kanbanniang" data-v-5775ee02><div class="banniang-container" style="display:;" data-v-5775ee02><div class="messageBox" style="right:68px;bottom:190px;display:none;" data-v-5775ee02>
+      欢迎来到 Lovers 的博客
+    </div> <div class="operation" style="right:90px;bottom:40px;display:;" data-v-5775ee02><i class="kbnfont kbn-ban-home ban-home" data-v-5775ee02></i> <i class="kbnfont kbn-ban-message message" data-v-5775ee02></i> <i class="kbnfont kbn-ban-close close" data-v-5775ee02></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-5775ee02><i class="kbnfont kbn-ban-info info" data-v-5775ee02></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:;" data-v-5775ee02></i></div> <canvas id="banniang" width="150" height="220" class="live2d" style="right:90px;bottom:-20px;opacity:0.9;" data-v-5775ee02></canvas></div> <div class="showBanNiang" style="display:none;" data-v-5775ee02>
+    看板娘
+  </div></div><APlayer audio="" fixed="true" mini="true" theme="#b7daff" loop="loop" order="list" preload="auto" volume="0.7" mutex="true" lrc-type="0" list-max-height="250" storage-name="vuepress-plugin-meting" id="aplayer-fixed"></APlayer></div></div>
+    <script src="/lzmblog/assets/js/app.f6582fa6.js" defer></script><script src="/lzmblog/assets/js/7.f579b280.js" defer></script><script src="/lzmblog/assets/js/26.d9e15335.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>简易代码实现超简单实用轮播图 | Lovers 的博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/lzmblog/lzmblog/favicon.ico">
+    <link rel="stylesheet" href="/lzmblog/style.css">
+    <meta name="description" content="个人博客">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/lzmblog/assets/css/0.styles.34e16441.css" as="style"><link rel="preload" href="/lzmblog/assets/js/app.f6582fa6.js" as="script"><link rel="preload" href="/lzmblog/assets/js/7.f579b280.js" as="script"><link rel="preload" href="/lzmblog/assets/js/20.a3f1c967.js" as="script"><link rel="prefetch" href="/lzmblog/assets/js/10.7063497e.js"><link rel="prefetch" href="/lzmblog/assets/js/11.c077aed5.js"><link rel="prefetch" href="/lzmblog/assets/js/12.3dc9bdbf.js"><link rel="prefetch" href="/lzmblog/assets/js/13.8c8bc62d.js"><link rel="prefetch" href="/lzmblog/assets/js/14.158e06d6.js"><link rel="prefetch" href="/lzmblog/assets/js/15.5cfac5ee.js"><link rel="prefetch" href="/lzmblog/assets/js/16.87fbfa73.js"><link rel="prefetch" href="/lzmblog/assets/js/17.7c036072.js"><link rel="prefetch" href="/lzmblog/assets/js/18.82e55eab.js"><link rel="prefetch" href="/lzmblog/assets/js/19.9dff5288.js"><link rel="prefetch" href="/lzmblog/assets/js/2.672cc620.js"><link rel="prefetch" href="/lzmblog/assets/js/21.3ff5f263.js"><link rel="prefetch" href="/lzmblog/assets/js/22.89c469f1.js"><link rel="prefetch" href="/lzmblog/assets/js/23.38743dcf.js"><link rel="prefetch" href="/lzmblog/assets/js/24.6bcac6e8.js"><link rel="prefetch" href="/lzmblog/assets/js/25.28974017.js"><link rel="prefetch" href="/lzmblog/assets/js/26.d9e15335.js"><link rel="prefetch" href="/lzmblog/assets/js/27.8a39c8f2.js"><link rel="prefetch" href="/lzmblog/assets/js/28.a01661e8.js"><link rel="prefetch" href="/lzmblog/assets/js/29.a4a5406a.js"><link rel="prefetch" href="/lzmblog/assets/js/3.0e874f07.js"><link rel="prefetch" href="/lzmblog/assets/js/30.355f61f5.js"><link rel="prefetch" href="/lzmblog/assets/js/31.4e589136.js"><link rel="prefetch" href="/lzmblog/assets/js/32.0a74b181.js"><link rel="prefetch" href="/lzmblog/assets/js/33.1f0a784e.js"><link rel="prefetch" href="/lzmblog/assets/js/34.13798fc1.js"><link rel="prefetch" href="/lzmblog/assets/js/35.ce17e3ed.js"><link rel="prefetch" href="/lzmblog/assets/js/36.bafc423d.js"><link rel="prefetch" href="/lzmblog/assets/js/37.25f39385.js"><link rel="prefetch" href="/lzmblog/assets/js/38.c4bf83e1.js"><link rel="prefetch" href="/lzmblog/assets/js/39.1c904ce9.js"><link rel="prefetch" href="/lzmblog/assets/js/4.393c1c4d.js"><link rel="prefetch" href="/lzmblog/assets/js/5.f28696c6.js"><link rel="prefetch" href="/lzmblog/assets/js/6.22e81d8d.js"><link rel="prefetch" href="/lzmblog/assets/js/8.bfecf23e.js"><link rel="prefetch" href="/lzmblog/assets/js/9.3b6d93a9.js">
+    <link rel="stylesheet" href="/lzmblog/assets/css/0.styles.34e16441.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="global-layout" data-v-7f2e4136><header class="header-container" style="background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:scroll;background-image:url(/lzmblog/post-bg.jpeg);" data-v-93921ff8 data-v-7f2e4136><nav class="navbar" style="position:absolute;opacity:1;transition:all 0.5s ease-in-out;" data-v-93921ff8><a href="/lzmblog/" class="navbar-link router-link-active">
+    Lovers Blog
+  </a> <ul class="navbar-links"><li><a href="/lzmblog/" class="router-link-active">
+        HOME
+      </a></li><li><a href="/lzmblog/about/">
+        ABOUT
+      </a></li><li><a href="/lzmblog/tags/">
+        TAGS
+      </a></li></ul> <div id="nav-icon"><span></span><span></span><span></span></div></nav> <div class="header-title" data-v-93921ff8 data-v-93921ff8><h1 data-v-93921ff8>简易代码实现超简单实用轮播图</h1> <p data-v-93921ff8></p></div></header> <div class="container" data-v-b3fda33c data-v-7f2e4136><main class="main" style="width:60%;" data-v-b3fda33c><div class="post" data-v-b3fda33c data-v-b3fda33c><article class="main-div"><div class="post-content content content__default"><h2 id="简易代码实现超简单实用轮播图"><a href="#简易代码实现超简单实用轮播图" class="header-anchor">#</a> 简易代码实现超简单实用轮播图</h2> <p><strong>1.</strong></p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token operator">&lt;</span><span class="token operator">!</span>DOCTYPE html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>meta <span class="token assign-left variable">charset</span><span class="token operator">=</span><span class="token string">&quot;UTF-8&quot;</span><span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>轮播图<span class="token operator">&lt;</span>/title<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>style<span class="token operator">&gt;</span>
+			.hr_100 <span class="token punctuation">{</span>height: 100px<span class="token punctuation">;</span><span class="token punctuation">}</span>
+			.box <span class="token punctuation">{</span>
+				width:520px<span class="token punctuation">;</span>
+				height:300px<span class="token punctuation">;</span>
+				border: 1px solid red<span class="token punctuation">;</span>
+				margin: <span class="token number">0</span> auto<span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+			img <span class="token punctuation">{</span>
+				width:520px<span class="token punctuation">;</span>
+				height:280px<span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+			
+		<span class="token operator">&lt;</span>/style<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>/head<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;hr_100&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;box&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>img <span class="token assign-left variable">src</span><span class="token operator">=</span><span class="token string">&quot;img/taobao1.png&quot;</span> <span class="token assign-left variable">alt</span><span class="token operator">=</span><span class="token string">&quot;&quot;</span> <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;img0&quot;</span>/<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;number&quot;</span> <span class="token operator">&gt;</span>
+       <span class="token operator">&lt;</span>span<span class="token operator">&gt;</span><span class="token operator"><span class="token file-descriptor important">1</span>&lt;</span>/span<span class="token operator">&gt;</span>   
+       <span class="token operator">&lt;</span>span<span class="token operator">&gt;</span><span class="token operator"><span class="token file-descriptor important">2</span>&lt;</span>/span<span class="token operator">&gt;</span>    
+       <span class="token operator">&lt;</span>span<span class="token operator">&gt;</span><span class="token operator"><span class="token file-descriptor important">3</span>&lt;</span>/span<span class="token operator">&gt;</span>
+       <span class="token operator">&lt;</span>span<span class="token operator">&gt;</span><span class="token operator"><span class="token file-descriptor important">4</span>&lt;</span>/span<span class="token operator">&gt;</span>
+       <span class="token operator">&lt;</span>span<span class="token operator">&gt;</span><span class="token operator"><span class="token file-descriptor important">5</span>&lt;</span>/span<span class="token operator">&gt;</span>
+     <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+			
+			var <span class="token assign-left variable">i</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+			var <span class="token assign-left variable">lb_img</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">&quot;img/taobao1.png&quot;</span>,<span class="token string">&quot;img/taobao2.png&quot;</span>,<span class="token string">&quot;img/taobao3.png&quot;</span>,<span class="token string">&quot;img/taobao4.png&quot;</span>,<span class="token string">&quot;img/taobao5.png&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+			<span class="token keyword">function</span> <span class="token function-name function">imgBox</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+			<span class="token punctuation">{</span>	
+			var <span class="token assign-left variable">imgbox</span><span class="token operator">=</span>document.getElementById<span class="token punctuation">(</span><span class="token string">&quot;img0&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			imgbox.src<span class="token operator">=</span>lb_img<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+			
+			var <span class="token assign-left variable">spanArray</span><span class="token operator">=</span>
+	   		document.getElementsByTagName<span class="token punctuation">(</span><span class="token string">&quot;span&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>//它是可以相当一个数组的
+	   		for<span class="token punctuation">(</span>var <span class="token assign-left variable">t</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>t<span class="token operator">&lt;</span>spanArray.length<span class="token punctuation">;</span>t++<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			spanArray<span class="token punctuation">[</span>t<span class="token punctuation">]</span>.style.color<span class="token operator">=</span><span class="token string">&quot;black&quot;</span><span class="token punctuation">;</span><span class="token punctuation">}</span>
+	   		//这个大括号决定了是同时显示还是从2开始变色
+			spanArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span>.style.color<span class="token operator">=</span><span class="token string">&quot;red&quot;</span><span class="token punctuation">;</span>
+			//这里的i必须放后面才不会错位
+			i++<span class="token punctuation">;</span>
+			if<span class="token punctuation">(</span>i<span class="token operator">==</span><span class="token number">5</span><span class="token punctuation">)</span>
+			<span class="token punctuation">{</span>
+				<span class="token assign-left variable">i</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+   			<span class="token punctuation">}</span>
+			setInterval<span class="token punctuation">(</span><span class="token string">&quot;imgBox()&quot;</span>,1000<span class="token punctuation">)</span><span class="token punctuation">;</span>//一般这里面放的还是函数，所以还是要构建函数
+		<span class="token operator">&lt;</span>/script<span class="token operator">&gt;</span>
+//首先是构建一个数组，用来存放图片的路径；
+通过调用图片的id.src<span class="token operator">=</span>数组<span class="token punctuation">[</span><span class="token punctuation">]</span>,来对应到相应的照片；
+然后用setInterval<span class="token punctuation">(</span><span class="token string">&quot;imgBox()&quot;</span>,1000<span class="token punctuation">)</span><span class="token punctuation">;</span>实现每一秒调用一次。
+但是缺陷在于这是一种置换图片的方式，并不是从左到右的一种推进式轮播
+	<span class="token operator">&lt;</span>/body<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/html<span class="token operator">&gt;</span>
+</code></pre></div><p><strong>2.
+标准化：即每个函数只实现一个效果或功能，便于封装，调用，层次也清晰。</strong></p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token operator">&lt;</span><span class="token operator">!</span>DOCTYPE html PUBLIC <span class="token string">&quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;</span> <span class="token string">&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html <span class="token assign-left variable">xmlns</span><span class="token operator">=</span><span class="token string">&quot;http://www.w3.org/1999/xhtml&quot;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>meta http-equiv<span class="token operator">=</span><span class="token string">&quot;Content-Type&quot;</span> <span class="token assign-left variable">content</span><span class="token operator">=</span><span class="token string">&quot;text/html; charset=utf-8&quot;</span> /<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>无标题文档<span class="token operator">&lt;</span>/title<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>style<span class="token operator">&gt;</span>
+<span class="token comment">#outer{</span>
+	width:520px<span class="token punctuation">;</span>
+	height:300px<span class="token punctuation">;</span>
+	border:1px solid yellow<span class="token punctuation">;</span>
+	margin:0 auto<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span>/style<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/head<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;outer&quot;</span><span class="token operator">&gt;</span>
+     <span class="token operator">&lt;</span>img <span class="token assign-left variable">src</span><span class="token operator">=</span><span class="token string">&quot;img/taobao1.png&quot;</span> <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;shop_pic&quot;</span>/<span class="token operator">&gt;</span>
+     <span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;number&quot;</span> <span class="token operator">&gt;</span>
+       <span class="token operator">&lt;</span>span<span class="token operator">&gt;</span><span class="token operator"><span class="token file-descriptor important">1</span>&lt;</span>/span<span class="token operator">&gt;</span>   
+       <span class="token operator">&lt;</span>span<span class="token operator">&gt;</span><span class="token operator"><span class="token file-descriptor important">2</span>&lt;</span>/span<span class="token operator">&gt;</span>    
+       <span class="token operator">&lt;</span>span<span class="token operator">&gt;</span><span class="token operator"><span class="token file-descriptor important">3</span>&lt;</span>/span<span class="token operator">&gt;</span>
+       <span class="token operator">&lt;</span>span<span class="token operator">&gt;</span><span class="token operator"><span class="token file-descriptor important">4</span>&lt;</span>/span<span class="token operator">&gt;</span>
+     <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/body<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+   var <span class="token assign-left variable">i</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+   var shop_pic_names <span class="token operator">=</span> 
+   <span class="token punctuation">[</span><span class="token string">&quot;img/taobao1.png&quot;</span>,<span class="token string">&quot;img/taobao2.png&quot;</span>,<span class="token string">&quot;img/taobao3.png&quot;</span>,<span class="token string">&quot;img/taobao4.png&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+   <span class="token keyword">function</span> <span class="token function-name function">AutoChangePic</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+   <span class="token punctuation">{</span>
+	  var picEle <span class="token operator">=</span>
+	  document.getElementById<span class="token punctuation">(</span><span class="token string">&quot;shop_pic&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	  picEle.src <span class="token operator">=</span>shop_pic_names<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+	  AutoChangeNumColor<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	  i++<span class="token punctuation">;</span> 
+	  //i<span class="token operator">=</span> i%4<span class="token punctuation">;</span>           
+	  if<span class="token punctuation">(</span> <span class="token assign-left variable">i</span><span class="token operator">==</span><span class="token number">4</span><span class="token punctuation">)</span>
+	  <span class="token punctuation">{</span>
+		  <span class="token assign-left variable">i</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+	  <span class="token punctuation">}</span>
+	  //-------------
+	  /*
+	  var <span class="token assign-left variable">picArray</span><span class="token operator">=</span>
+	  document.getElementsByTagName<span class="token punctuation">(</span><span class="token string">&quot;img&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	  picArray<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>.src<span class="token operator">=</span><span class="token string">&quot;pic2.jpg&quot;</span><span class="token punctuation">;</span>
+	  */
+   <span class="token punctuation">}</span>
+   <span class="token keyword">function</span> AutoChangeNumColor<span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+   <span class="token punctuation">{</span>
+	   var <span class="token assign-left variable">spanArray</span><span class="token operator">=</span>
+	   document.getElementsByTagName<span class="token punctuation">(</span><span class="token string">&quot;span&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	   for<span class="token punctuation">(</span>var <span class="token assign-left variable">t</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>t<span class="token operator">&lt;</span>spanArray.length<span class="token punctuation">;</span>t++<span class="token punctuation">)</span>
+	   <span class="token punctuation">{</span>
+		 spanArray<span class="token punctuation">[</span>t<span class="token punctuation">]</span>.style.color<span class="token operator">=</span><span class="token string">&quot;black&quot;</span><span class="token punctuation">;</span>   
+	   <span class="token punctuation">}</span>
+	   spanArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span>.style.color<span class="token operator">=</span><span class="token string">&quot;red&quot;</span><span class="token punctuation">;</span>
+	   
+	   
+   <span class="token punctuation">}</span>
+   setInterval<span class="token punctuation">(</span><span class="token string">&quot;AutoChangePic()&quot;</span>,1000<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span>/script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/html<span class="token operator">&gt;</span>
+
+</code></pre></div><p>两者效果是一样的，有对比才更好理解。
+图片来自淘宝banner图，可自行下载！</p></div></article> <div class="main-div vssue"><!----></div></div></main> <aside class="aside" data-v-b3fda33c data-v-b3fda33c><div class="info-card main-div" data-v-1311ce9e data-v-b3fda33c><div class="info-card-header" style="background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:scroll;background-image:url(/lzmblog/me.png);" data-v-1311ce9e><img src="/lzmblog/logo.jpg" alt="lzmlovers" class="info-avatar" data-v-1311ce9e></div> <div class="info-card-body" data-v-1311ce9e><section class="info-name" data-v-1311ce9e>
+      lzmlovers
+    </section> <section class="info-desc" data-v-1311ce9e>Tomorrow will be better<br/>明天会更好</section> <section class="info-contact" data-v-1311ce9e><section data-v-1311ce9e><span data-v-1311ce9e data-v-1311ce9e><svg class="icon" style="font-size:1em;" data-v-1311ce9e data-v-1311ce9e><use xlink:href="#icon-location" data-v-1311ce9e data-v-1311ce9e></use></svg><span class="info-text" data-v-1311ce9e data-v-1311ce9e>
+          YongZhou, China
+        </span></span></section> <!----> <section data-v-1311ce9e><span data-v-1311ce9e data-v-1311ce9e><svg class="icon" style="font-size:1em;" data-v-1311ce9e data-v-1311ce9e><use xlink:href="#icon-email" data-v-1311ce9e data-v-1311ce9e></use></svg><span class="info-text" data-v-1311ce9e data-v-1311ce9e>
+          2095793572@qq.com
+        </span></span></section></section></div> <div class="info-card-footer" data-v-1311ce9e><p class="footer-sns-link" data-v-1311ce9e><a target="_blank" href="https://blog.csdn.net/qq_44760912" class="sns-link" data-v-1311ce9e><span class="sns-icon" data-v-1311ce9e data-v-1311ce9e><svg class="icon" style="font-size:35px;" data-v-1311ce9e data-v-1311ce9e><use xlink:href="#icon-csdn" data-v-1311ce9e data-v-1311ce9e></use></svg></span></a><a target="_blank" href="https://weibo.com/u/7747087955" class="sns-link" data-v-1311ce9e><span class="sns-icon" data-v-1311ce9e data-v-1311ce9e><svg class="icon" style="font-size:35px;" data-v-1311ce9e data-v-1311ce9e><use xlink:href="#icon-weibo" data-v-1311ce9e data-v-1311ce9e></use></svg></span></a><a target="_blank" href="https://www.zhihu.com/people/xiao-zhu-wen-wen-ti" class="sns-link" data-v-1311ce9e><span class="sns-icon" data-v-1311ce9e data-v-1311ce9e><svg class="icon" style="font-size:35px;" data-v-1311ce9e data-v-1311ce9e><use xlink:href="#icon-zhihu" data-v-1311ce9e data-v-1311ce9e></use></svg></span></a><a target="_blank" href="https://github.com/git123hub121" class="sns-link" data-v-1311ce9e><span class="sns-icon" data-v-1311ce9e data-v-1311ce9e><svg class="icon" style="font-size:35px;" data-v-1311ce9e data-v-1311ce9e><use xlink:href="#icon-github" data-v-1311ce9e data-v-1311ce9e></use></svg></span></a></p></div></div> <div class="post-toc main-div aside-toc" style="position:relative;top:0;width:0px;" data-v-b3fda33c><h4>- CATALOG</h4> <div class="post-nav-toc"><ul><li><a href="/lzmblog/posts/2019/12/11/%E7%AE%80%E6%98%93%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E8%B6%85%E7%AE%80%E5%8D%95%E5%AE%9E%E7%94%A8%E8%BD%AE%E6%92%AD%E5%9B%BE.html#简易代码实现超简单实用轮播图">简易代码实现超简单实用轮播图</a></li></ul></div></div></aside></div> <footer class="footer" data-v-7f2e4136><p class="footer-sns-link"><a target="_blank" href="https://blog.csdn.net/qq_44760912" class="sns-link"><span class="sns-icon"><svg class="icon" style="font-size:40px;"><use xlink:href="#icon-csdn"></use></svg></span></a><a target="_blank" href="https://weibo.com/u/7747087955" class="sns-link"><span class="sns-icon"><svg class="icon" style="font-size:40px;"><use xlink:href="#icon-weibo"></use></svg></span></a><a target="_blank" href="https://www.zhihu.com/people/xiao-zhu-wen-wen-ti" class="sns-link"><span class="sns-icon"><svg class="icon" style="font-size:40px;"><use xlink:href="#icon-zhihu"></use></svg></span></a><a target="_blank" href="https://github.com/git123hub121" class="sns-link"><span class="sns-icon"><svg class="icon" style="font-size:40px;"><use xlink:href="#icon-github"></use></svg></span></a></p> <div class="copyright"><span id="custom">Copyright &copy; Lovers Blog 2022 | <a href="https://www.vuepress.cn/" target="_blank">VuePress</a></span> <iframe src="https://ghbtns.com/github-btn.html?user=youdeliang&amp;repo=vuepress-theme-melodydl&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="80px" height="20px" class="footer-btn" style="margin-left: 2px; margin-bottom:-5px;"></iframe></div></footer></div><div class="global-ui"><!----><!----><canvas id="vuepress-canvas-ribbon"></canvas><canvas id="vuepress-canvas-cursor"></canvas><div></div><div class="kanbanniang" data-v-5775ee02><div class="banniang-container" style="display:;" data-v-5775ee02><div class="messageBox" style="right:68px;bottom:190px;display:none;" data-v-5775ee02>
+      欢迎来到 Lovers 的博客
+    </div> <div class="operation" style="right:90px;bottom:40px;display:;" data-v-5775ee02><i class="kbnfont kbn-ban-home ban-home" data-v-5775ee02></i> <i class="kbnfont kbn-ban-message message" data-v-5775ee02></i> <i class="kbnfont kbn-ban-close close" data-v-5775ee02></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-5775ee02><i class="kbnfont kbn-ban-info info" data-v-5775ee02></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:;" data-v-5775ee02></i></div> <canvas id="banniang" width="150" height="220" class="live2d" style="right:90px;bottom:-20px;opacity:0.9;" data-v-5775ee02></canvas></div> <div class="showBanNiang" style="display:none;" data-v-5775ee02>
+    看板娘
+  </div></div><APlayer audio="" fixed="true" mini="true" theme="#b7daff" loop="loop" order="list" preload="auto" volume="0.7" mutex="true" lrc-type="0" list-max-height="250" storage-name="vuepress-plugin-meting" id="aplayer-fixed"></APlayer></div></div>
+    <script src="/lzmblog/assets/js/app.f6582fa6.js" defer></script><script src="/lzmblog/assets/js/7.f579b280.js" defer></script><script src="/lzmblog/assets/js/20.a3f1c967.js" defer></script>
+  </body>
+</html>

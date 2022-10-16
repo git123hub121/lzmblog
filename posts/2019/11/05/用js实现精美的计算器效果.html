@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>用js实现精美的计算器效果 | Lovers 的博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/lzmblog/lzmblog/favicon.ico">
+    <link rel="stylesheet" href="/lzmblog/style.css">
+    <meta name="description" content="个人博客">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/lzmblog/assets/css/0.styles.34e16441.css" as="style"><link rel="preload" href="/lzmblog/assets/js/app.f6582fa6.js" as="script"><link rel="preload" href="/lzmblog/assets/js/7.f579b280.js" as="script"><link rel="preload" href="/lzmblog/assets/js/12.3dc9bdbf.js" as="script"><link rel="prefetch" href="/lzmblog/assets/js/10.7063497e.js"><link rel="prefetch" href="/lzmblog/assets/js/11.c077aed5.js"><link rel="prefetch" href="/lzmblog/assets/js/13.8c8bc62d.js"><link rel="prefetch" href="/lzmblog/assets/js/14.158e06d6.js"><link rel="prefetch" href="/lzmblog/assets/js/15.5cfac5ee.js"><link rel="prefetch" href="/lzmblog/assets/js/16.87fbfa73.js"><link rel="prefetch" href="/lzmblog/assets/js/17.7c036072.js"><link rel="prefetch" href="/lzmblog/assets/js/18.82e55eab.js"><link rel="prefetch" href="/lzmblog/assets/js/19.9dff5288.js"><link rel="prefetch" href="/lzmblog/assets/js/2.672cc620.js"><link rel="prefetch" href="/lzmblog/assets/js/20.a3f1c967.js"><link rel="prefetch" href="/lzmblog/assets/js/21.3ff5f263.js"><link rel="prefetch" href="/lzmblog/assets/js/22.89c469f1.js"><link rel="prefetch" href="/lzmblog/assets/js/23.38743dcf.js"><link rel="prefetch" href="/lzmblog/assets/js/24.6bcac6e8.js"><link rel="prefetch" href="/lzmblog/assets/js/25.28974017.js"><link rel="prefetch" href="/lzmblog/assets/js/26.d9e15335.js"><link rel="prefetch" href="/lzmblog/assets/js/27.8a39c8f2.js"><link rel="prefetch" href="/lzmblog/assets/js/28.a01661e8.js"><link rel="prefetch" href="/lzmblog/assets/js/29.a4a5406a.js"><link rel="prefetch" href="/lzmblog/assets/js/3.0e874f07.js"><link rel="prefetch" href="/lzmblog/assets/js/30.355f61f5.js"><link rel="prefetch" href="/lzmblog/assets/js/31.4e589136.js"><link rel="prefetch" href="/lzmblog/assets/js/32.0a74b181.js"><link rel="prefetch" href="/lzmblog/assets/js/33.1f0a784e.js"><link rel="prefetch" href="/lzmblog/assets/js/34.13798fc1.js"><link rel="prefetch" href="/lzmblog/assets/js/35.ce17e3ed.js"><link rel="prefetch" href="/lzmblog/assets/js/36.bafc423d.js"><link rel="prefetch" href="/lzmblog/assets/js/37.25f39385.js"><link rel="prefetch" href="/lzmblog/assets/js/38.c4bf83e1.js"><link rel="prefetch" href="/lzmblog/assets/js/39.1c904ce9.js"><link rel="prefetch" href="/lzmblog/assets/js/4.393c1c4d.js"><link rel="prefetch" href="/lzmblog/assets/js/5.f28696c6.js"><link rel="prefetch" href="/lzmblog/assets/js/6.22e81d8d.js"><link rel="prefetch" href="/lzmblog/assets/js/8.bfecf23e.js"><link rel="prefetch" href="/lzmblog/assets/js/9.3b6d93a9.js">
+    <link rel="stylesheet" href="/lzmblog/assets/css/0.styles.34e16441.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="global-layout" data-v-7f2e4136><header class="header-container" style="background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:scroll;background-image:url(/lzmblog/post-bg.jpeg);" data-v-93921ff8 data-v-7f2e4136><nav class="navbar" style="position:absolute;opacity:1;transition:all 0.5s ease-in-out;" data-v-93921ff8><a href="/lzmblog/" class="navbar-link router-link-active">
+    Lovers Blog
+  </a> <ul class="navbar-links"><li><a href="/lzmblog/" class="router-link-active">
+        HOME
+      </a></li><li><a href="/lzmblog/about/">
+        ABOUT
+      </a></li><li><a href="/lzmblog/tags/">
+        TAGS
+      </a></li></ul> <div id="nav-icon"><span></span><span></span><span></span></div></nav> <div class="header-title" data-v-93921ff8 data-v-93921ff8><h1 data-v-93921ff8>用js实现精美的计算器效果</h1> <p data-v-93921ff8></p></div></header> <div class="container" data-v-b3fda33c data-v-7f2e4136><main class="main" style="width:60%;" data-v-b3fda33c><div class="post" data-v-b3fda33c data-v-b3fda33c><article class="main-div"><div class="post-content content content__default"><h2 id="用js实现精美的计算器效果"><a href="#用js实现精美的计算器效果" class="header-anchor">#</a> 用js实现精美的计算器效果</h2> <p>所有代码如下：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token operator">&lt;</span><span class="token operator">!</span>doctype html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>meta <span class="token assign-left variable">charset</span><span class="token operator">=</span><span class="token string">&quot;utf-8&quot;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>无标题文档<span class="token operator">&lt;</span>/title<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>style<span class="token operator">&gt;</span>
+	.btn-radius <span class="token punctuation">{</span>
+			border-radius: 2px<span class="token punctuation">;</span>
+			border: 1px solid <span class="token comment">#e5e5e5;</span>
+			background: -moz-linear-gradient<span class="token punctuation">(</span>top,<span class="token comment">#f7f7f7,#ebebeb);</span>
+			line-height: 29px<span class="token punctuation">;</span>
+			text-align: center<span class="token punctuation">;</span>
+			font-weight: bold<span class="token punctuation">;</span>
+			color: <span class="token comment">#666;</span>
+			float: left<span class="token punctuation">;</span>
+			margin-left: 11px<span class="token punctuation">;</span>
+			margin-top: 11px<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token comment">#calcuator {</span>
+        width: 200px<span class="token punctuation">;</span>
+        height: 315px<span class="token punctuation">;</span>
+        padding: 10px<span class="token punctuation">;</span>
+        border: 1px solid <span class="token comment">#e5e5e5;</span>
+        background: <span class="token comment">#f8f8f8;</span>
+        margin: 0px auto<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+     
+    <span class="token comment">#calcuator #input-box,#show {</span>
+        margin: <span class="token number">0</span><span class="token punctuation">;</span>
+        width: 187px<span class="token punctuation">;</span>
+        padding: 6px 5px<span class="token punctuation">;</span>
+		height: 28px<span class="token punctuation">;</span>
+        border: 1px solid <span class="token comment">#e5e5e5;</span>
+		border-radius: 3px<span class="token punctuation">;</span>
+		background: <span class="token comment">#fff;</span>
+        text-align: right<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+	<span class="token comment">#show {</span>
+		height: 56px<span class="token punctuation">;</span>
+		overflow: hidden<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span> 
+    <span class="token comment">#calcuator #btn-list {</span>
+        width: 200px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+     
+    <span class="token comment">#calcuator #btn-list .btn-radius {</span>
+        text-align: center<span class="token punctuation">;</span>
+        line-height: 29px<span class="token punctuation">;</span>
+        float: left<span class="token punctuation">;</span>
+        margin-left: 11px<span class="token punctuation">;</span>
+        margin-top: 11px<span class="token punctuation">;</span>
+        cursor: pointer<span class="token punctuation">;</span>
+        border: 1px <span class="token comment">#0CF solid;</span>
+    <span class="token punctuation">}</span>
+     
+    <span class="token comment">#calcuator #btn-list .btn-30 {</span>
+        width: 29px<span class="token punctuation">;</span>
+        height: 29px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+     
+    <span class="token comment">#calcuator #btn-list .btn-70 {</span>
+        width: 70px<span class="token punctuation">;</span>
+        height: 29px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+     
+    <span class="token comment">#calcuator #btn-list .clear-marginleft {</span>
+        margin-left: <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+     
+    <span class="token comment">#calcuator #btn-list .font-14 {</span>
+        font-size: 14px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+     
+    <span class="token comment">#calcuator #btn-list .color-red {</span>
+        color: <span class="token comment">#ff5050</span>
+    <span class="token punctuation">}</span>
+     
+    <span class="token comment">#calcuator #btn-list .color-blue {</span>
+        color: <span class="token comment">#00b4ff</span>
+    <span class="token punctuation">}</span>
+
+
+	<span class="token operator">&lt;</span>/style<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/head<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>br<span class="token operator">&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;calcuator&quot;</span><span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;show&quot;</span><span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;showme&quot;</span><span class="token operator">&gt;</span> <span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+		
+		<span class="token operator">&lt;</span>input <span class="token assign-left variable">type</span><span class="token operator">=</span><span class="token string">&quot;text&quot;</span> <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;input-box&quot;</span> <span class="token assign-left variable">value</span><span class="token operator">=</span><span class="token string">&quot;0&quot;</span> <span class="token assign-left variable">size</span><span class="token operator">=</span><span class="token string">&quot;21&quot;</span> <span class="token assign-left variable">maxlength</span><span class="token operator">=</span><span class="token string">&quot;20&quot;</span><span class="token operator">&gt;</span>
+		
+	<span class="token operator">&lt;</span>div <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;btn-list&quot;</span><span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">onClick</span><span class="token operator">=</span><span class="token string">&quot;s('0')&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;btn-30 btn-radius color-red&quot;</span> <span class="token assign-left variable">style</span><span class="token operator">=</span><span class="token string">&quot;margin-left: 0px;&quot;</span><span class="token operator">&gt;</span>C
+		<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">onClick</span><span class="token operator">=</span><span class="token string">&quot;operator('opposite')&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;btn-30 btn-radius color-blue&quot;</span><span class="token operator">&gt;</span>+/-<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">onClick</span><span class="token operator">=</span><span class="token string">&quot;operator('percent')&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;btn-30 btn-radius color-blue&quot;</span><span class="token operator">&gt;</span>%<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">onClick</span><span class="token operator">=</span><span class="token string">&quot;operator('backspace')&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;btn-70 btn-radius color-red&quot;</span><span class="token operator">&gt;</span>←<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">onClick</span><span class="token operator">=</span><span class="token string">&quot;a('7')&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;btn-30 btn-radius clear-marginleft&quot;</span><span class="token operator">&gt;</span><span class="token operator"><span class="token file-descriptor important">7</span>&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">onClick</span><span class="token operator">=</span><span class="token string">&quot;a('8')&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;btn-30 btn-radius&quot;</span><span class="token operator">&gt;</span><span class="token operator"><span class="token file-descriptor important">8</span>&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">onClick</span><span class="token operator">=</span><span class="token string">&quot;a('9')&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;btn-30 btn-radius &quot;</span><span class="token operator">&gt;</span><span class="token operator"><span class="token file-descriptor important">9</span>&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">onClick</span><span class="token operator">=</span><span class="token string">&quot;a('+')&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;btn-30 btn-radius color-blue&quot;</span><span class="token operator">&gt;</span>+<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">onClick</span><span class="token operator">=</span><span class="token string">&quot;a('-')&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;btn-30 btn-radius color-blue&quot;</span><span class="token operator">&gt;</span>-<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">onClick</span><span class="token operator">=</span><span class="token string">&quot;a('4')&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;btn-30 btn-radius clear-marginleft&quot;</span><span class="token operator">&gt;</span><span class="token operator"><span class="token file-descriptor important">4</span>&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">onClick</span><span class="token operator">=</span><span class="token string">&quot;a('5')&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;btn-30 btn-radius&quot;</span><span class="token operator">&gt;</span><span class="token operator"><span class="token file-descriptor important">5</span>&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">onClick</span><span class="token operator">=</span><span class="token string">&quot;a('6')&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;btn-30 btn-radius &quot;</span><span class="token operator">&gt;</span><span class="token operator"><span class="token file-descriptor important">6</span>&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">onClick</span><span class="token operator">=</span><span class="token string">&quot;a('*')&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;btn-30 btn-radius color-blue&quot;</span><span class="token operator">&gt;</span>×<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">onClick</span><span class="token operator">=</span><span class="token string">&quot;a('/')&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;btn-30 btn-radius color-blue&quot;</span><span class="token operator">&gt;</span>÷<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">onClick</span><span class="token operator">=</span><span class="token string">&quot;a('1')&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;btn-30 btn-radius clear-marginleft&quot;</span><span class="token operator">&gt;</span><span class="token operator"><span class="token file-descriptor important">1</span>&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">onClick</span><span class="token operator">=</span><span class="token string">&quot;a('2')&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;btn-30 btn-radius&quot;</span><span class="token operator">&gt;</span><span class="token operator"><span class="token file-descriptor important">2</span>&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">onClick</span><span class="token operator">=</span><span class="token string">&quot;a('3')&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;btn-30 btn-radius &quot;</span><span class="token operator">&gt;</span><span class="token operator"><span class="token file-descriptor important">3</span>&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">onClick</span><span class="token operator">=</span><span class="token string">&quot;operator('pow')&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;btn-30 btn-radius color-blue&quot;</span><span class="token operator">&gt;</span>x²<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">onClick</span><span class="token operator">=</span><span class="token string">&quot;operator('sqrt')&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;btn-30 btn-radius color-blue&quot;</span><span class="token operator">&gt;</span>√<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">onClick</span><span class="token operator">=</span><span class="token string">&quot;a('0')&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;btn-70 btn-radius clear-marginleft&quot;</span><span class="token operator">&gt;</span><span class="token operator"><span class="token file-descriptor important">0</span>&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">onClick</span><span class="token operator">=</span><span class="token string">&quot;a('.')&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;btn-30 btn-radius&quot;</span><span class="token operator">&gt;</span>.<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">onClick</span><span class="token operator">=</span><span class="token string">&quot;e()&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;btn-70 btn-radius color-red&quot;</span><span class="token operator">&gt;=</span><span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+		<span class="token assign-left variable">input</span><span class="token operator">=</span>document.getElementById<span class="token punctuation">(</span><span class="token string">'input-box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token assign-left variable">show</span><span class="token operator">=</span>document.getElementById<span class="token punctuation">(</span><span class="token string">'showme'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">function</span> operator<span class="token punctuation">(</span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			switch<span class="token punctuation">(</span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword">case</span> <span class="token string">&quot;backspace&quot;</span><span class="token builtin class-name">:</span>
+					var str <span class="token operator">=</span> input.value<span class="token punctuation">;</span>
+					<span class="token assign-left variable">str</span><span class="token operator">=</span><span class="token punctuation">(</span>str<span class="token operator">!=</span><span class="token string">&quot;0&quot;</span><span class="token punctuation">)</span>?str:<span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+					<span class="token assign-left variable">str</span><span class="token operator">=</span>str.substr<span class="token punctuation">(</span><span class="token number">0</span>,str.length-1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token assign-left variable">str</span><span class="token operator">=</span><span class="token punctuation">(</span>str<span class="token operator">!=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>?str:<span class="token string">&quot;0&quot;</span><span class="token punctuation">;</span>
+					input.value<span class="token operator">=</span>str<span class="token punctuation">;</span>
+					<span class="token builtin class-name">break</span><span class="token punctuation">;</span>
+				<span class="token keyword">case</span> <span class="token string">&quot;opposite&quot;</span><span class="token builtin class-name">:</span>
+					input.value<span class="token operator">=</span>-input.value<span class="token punctuation">;</span>
+					<span class="token builtin class-name">break</span><span class="token punctuation">;</span>
+				<span class="token keyword">case</span> <span class="token string">&quot;percent&quot;</span><span class="token builtin class-name">:</span>
+				input.value<span class="token operator">=</span>input.value/100<span class="token punctuation">;</span>
+					<span class="token builtin class-name">break</span><span class="token punctuation">;</span>
+				<span class="token keyword">case</span> <span class="token string">&quot;pow&quot;</span><span class="token builtin class-name">:</span>
+					input.value<span class="token operator">=</span>Math.pow<span class="token punctuation">(</span>input.value,2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token builtin class-name">break</span><span class="token punctuation">;</span>
+				<span class="token keyword">case</span> <span class="token string">&quot;sqrt&quot;</span><span class="token builtin class-name">:</span>
+					input.value<span class="token operator">=</span>Math.sqrt<span class="token punctuation">(</span>input.value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token builtin class-name">break</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword">function</span> s<span class="token punctuation">(</span>v<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			input.value<span class="token operator">=</span>v<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword">function</span> a<span class="token punctuation">(</span>v<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			if<span class="token punctuation">(</span>input.value<span class="token operator">==</span><span class="token string">'0'</span> <span class="token operator">&amp;&amp;</span> <span class="token assign-left variable">v</span><span class="token operator">==</span><span class="token string">'0'</span><span class="token punctuation">)</span>
+				input.value<span class="token operator">=</span><span class="token string">'0'</span><span class="token punctuation">;</span>
+			<span class="token keyword">else</span> <span class="token punctuation">{</span>
+				if<span class="token punctuation">(</span>input.value<span class="token operator">==</span><span class="token string">'0'</span> <span class="token operator">&amp;&amp;</span> v<span class="token operator">!=</span><span class="token string">'.'</span><span class="token punctuation">)</span>
+					input.value<span class="token operator">=</span>v<span class="token punctuation">;</span>
+				<span class="token keyword">else</span> input.value<span class="token operator">+=</span>v<span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword">function</span> <span class="token function-name function">e</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			try <span class="token punctuation">{</span>
+				if<span class="token punctuation">(</span>show.offsetHeight <span class="token operator">&gt;</span> <span class="token number">50</span><span class="token punctuation">)</span>
+					<span class="token punctuation">{</span>
+						<span class="token assign-left variable">t</span><span class="token operator">=</span>show.innerHTML.indexOf<span class="token punctuation">(</span><span class="token string">'=&lt;br&gt;'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+						var <span class="token assign-left variable">str</span><span class="token operator">=</span>show.innerHTML<span class="token punctuation">;</span>
+						<span class="token assign-left variable">str</span><span class="token operator">=</span>str.substr<span class="token punctuation">(</span>t+5,str.length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+						show.innerHTML<span class="token operator">=</span>str<span class="token punctuation">;</span>
+					<span class="token punctuation">}</span>
+				show.innerHTML <span class="token operator">+=</span> input.value+ <span class="token string">'=&lt;br&gt;'</span><span class="token punctuation">;</span>
+				s<span class="token punctuation">(</span>eval<span class="token punctuation">(</span>input.value<span class="token punctuation">))</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+			catch<span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				s<span class="token punctuation">(</span><span class="token string">'无效输入'</span><span class="token punctuation">)</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+	<span class="token operator">&lt;</span>/script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/body<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>/html<span class="token operator">&gt;</span>
+
+</code></pre></div><p><img src="https://img-blog.csdnimg.cn/20191105183318228.png" alt="在这里插入图片描述"><br>
+此文章为本人学习总结，虽非原创，但亦是个人学习成果，供大家学习参考。</p></div></article> <div class="main-div vssue"><!----></div></div></main> <aside class="aside" data-v-b3fda33c data-v-b3fda33c><div class="info-card main-div" data-v-1311ce9e data-v-b3fda33c><div class="info-card-header" style="background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:scroll;background-image:url(/lzmblog/me.png);" data-v-1311ce9e><img src="/lzmblog/logo.jpg" alt="lzmlovers" class="info-avatar" data-v-1311ce9e></div> <div class="info-card-body" data-v-1311ce9e><section class="info-name" data-v-1311ce9e>
+      lzmlovers
+    </section> <section class="info-desc" data-v-1311ce9e>Tomorrow will be better<br/>明天会更好</section> <section class="info-contact" data-v-1311ce9e><section data-v-1311ce9e><span data-v-1311ce9e data-v-1311ce9e><svg class="icon" style="font-size:1em;" data-v-1311ce9e data-v-1311ce9e><use xlink:href="#icon-location" data-v-1311ce9e data-v-1311ce9e></use></svg><span class="info-text" data-v-1311ce9e data-v-1311ce9e>
+          YongZhou, China
+        </span></span></section> <!----> <section data-v-1311ce9e><span data-v-1311ce9e data-v-1311ce9e><svg class="icon" style="font-size:1em;" data-v-1311ce9e data-v-1311ce9e><use xlink:href="#icon-email" data-v-1311ce9e data-v-1311ce9e></use></svg><span class="info-text" data-v-1311ce9e data-v-1311ce9e>
+          2095793572@qq.com
+        </span></span></section></section></div> <div class="info-card-footer" data-v-1311ce9e><p class="footer-sns-link" data-v-1311ce9e><a target="_blank" href="https://blog.csdn.net/qq_44760912" class="sns-link" data-v-1311ce9e><span class="sns-icon" data-v-1311ce9e data-v-1311ce9e><svg class="icon" style="font-size:35px;" data-v-1311ce9e data-v-1311ce9e><use xlink:href="#icon-csdn" data-v-1311ce9e data-v-1311ce9e></use></svg></span></a><a target="_blank" href="https://weibo.com/u/7747087955" class="sns-link" data-v-1311ce9e><span class="sns-icon" data-v-1311ce9e data-v-1311ce9e><svg class="icon" style="font-size:35px;" data-v-1311ce9e data-v-1311ce9e><use xlink:href="#icon-weibo" data-v-1311ce9e data-v-1311ce9e></use></svg></span></a><a target="_blank" href="https://www.zhihu.com/people/xiao-zhu-wen-wen-ti" class="sns-link" data-v-1311ce9e><span class="sns-icon" data-v-1311ce9e data-v-1311ce9e><svg class="icon" style="font-size:35px;" data-v-1311ce9e data-v-1311ce9e><use xlink:href="#icon-zhihu" data-v-1311ce9e data-v-1311ce9e></use></svg></span></a><a target="_blank" href="https://github.com/git123hub121" class="sns-link" data-v-1311ce9e><span class="sns-icon" data-v-1311ce9e data-v-1311ce9e><svg class="icon" style="font-size:35px;" data-v-1311ce9e data-v-1311ce9e><use xlink:href="#icon-github" data-v-1311ce9e data-v-1311ce9e></use></svg></span></a></p></div></div> <div class="post-toc main-div aside-toc" style="position:relative;top:0;width:0px;" data-v-b3fda33c><h4>- CATALOG</h4> <div class="post-nav-toc"><ul><li><a href="/lzmblog/posts/2019/11/05/%E7%94%A8js%E5%AE%9E%E7%8E%B0%E7%B2%BE%E7%BE%8E%E7%9A%84%E8%AE%A1%E7%AE%97%E5%99%A8%E6%95%88%E6%9E%9C.html#用js实现精美的计算器效果">用js实现精美的计算器效果</a></li></ul></div></div></aside></div> <footer class="footer" data-v-7f2e4136><p class="footer-sns-link"><a target="_blank" href="https://blog.csdn.net/qq_44760912" class="sns-link"><span class="sns-icon"><svg class="icon" style="font-size:40px;"><use xlink:href="#icon-csdn"></use></svg></span></a><a target="_blank" href="https://weibo.com/u/7747087955" class="sns-link"><span class="sns-icon"><svg class="icon" style="font-size:40px;"><use xlink:href="#icon-weibo"></use></svg></span></a><a target="_blank" href="https://www.zhihu.com/people/xiao-zhu-wen-wen-ti" class="sns-link"><span class="sns-icon"><svg class="icon" style="font-size:40px;"><use xlink:href="#icon-zhihu"></use></svg></span></a><a target="_blank" href="https://github.com/git123hub121" class="sns-link"><span class="sns-icon"><svg class="icon" style="font-size:40px;"><use xlink:href="#icon-github"></use></svg></span></a></p> <div class="copyright"><span id="custom">Copyright &copy; Lovers Blog 2022 | <a href="https://www.vuepress.cn/" target="_blank">VuePress</a></span> <iframe src="https://ghbtns.com/github-btn.html?user=youdeliang&amp;repo=vuepress-theme-melodydl&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="80px" height="20px" class="footer-btn" style="margin-left: 2px; margin-bottom:-5px;"></iframe></div></footer></div><div class="global-ui"><!----><!----><canvas id="vuepress-canvas-ribbon"></canvas><canvas id="vuepress-canvas-cursor"></canvas><div></div><div class="kanbanniang" data-v-5775ee02><div class="banniang-container" style="display:;" data-v-5775ee02><div class="messageBox" style="right:68px;bottom:190px;display:none;" data-v-5775ee02>
+      欢迎来到 Lovers 的博客
+    </div> <div class="operation" style="right:90px;bottom:40px;display:;" data-v-5775ee02><i class="kbnfont kbn-ban-home ban-home" data-v-5775ee02></i> <i class="kbnfont kbn-ban-message message" data-v-5775ee02></i> <i class="kbnfont kbn-ban-close close" data-v-5775ee02></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-5775ee02><i class="kbnfont kbn-ban-info info" data-v-5775ee02></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:;" data-v-5775ee02></i></div> <canvas id="banniang" width="150" height="220" class="live2d" style="right:90px;bottom:-20px;opacity:0.9;" data-v-5775ee02></canvas></div> <div class="showBanNiang" style="display:none;" data-v-5775ee02>
+    看板娘
+  </div></div><APlayer audio="" fixed="true" mini="true" theme="#b7daff" loop="loop" order="list" preload="auto" volume="0.7" mutex="true" lrc-type="0" list-max-height="250" storage-name="vuepress-plugin-meting" id="aplayer-fixed"></APlayer></div></div>
+    <script src="/lzmblog/assets/js/app.f6582fa6.js" defer></script><script src="/lzmblog/assets/js/7.f579b280.js" defer></script><script src="/lzmblog/assets/js/12.3dc9bdbf.js" defer></script>
+  </body>
+</html>

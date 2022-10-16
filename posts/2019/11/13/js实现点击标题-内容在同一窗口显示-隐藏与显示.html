@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>js实现点击标题，内容在同一窗口显示（隐藏与显示） | Lovers 的博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/lzmblog/lzmblog/favicon.ico">
+    <link rel="stylesheet" href="/lzmblog/style.css">
+    <meta name="description" content="个人博客">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/lzmblog/assets/css/0.styles.34e16441.css" as="style"><link rel="preload" href="/lzmblog/assets/js/app.f6582fa6.js" as="script"><link rel="preload" href="/lzmblog/assets/js/7.f579b280.js" as="script"><link rel="preload" href="/lzmblog/assets/js/15.5cfac5ee.js" as="script"><link rel="prefetch" href="/lzmblog/assets/js/10.7063497e.js"><link rel="prefetch" href="/lzmblog/assets/js/11.c077aed5.js"><link rel="prefetch" href="/lzmblog/assets/js/12.3dc9bdbf.js"><link rel="prefetch" href="/lzmblog/assets/js/13.8c8bc62d.js"><link rel="prefetch" href="/lzmblog/assets/js/14.158e06d6.js"><link rel="prefetch" href="/lzmblog/assets/js/16.87fbfa73.js"><link rel="prefetch" href="/lzmblog/assets/js/17.7c036072.js"><link rel="prefetch" href="/lzmblog/assets/js/18.82e55eab.js"><link rel="prefetch" href="/lzmblog/assets/js/19.9dff5288.js"><link rel="prefetch" href="/lzmblog/assets/js/2.672cc620.js"><link rel="prefetch" href="/lzmblog/assets/js/20.a3f1c967.js"><link rel="prefetch" href="/lzmblog/assets/js/21.3ff5f263.js"><link rel="prefetch" href="/lzmblog/assets/js/22.89c469f1.js"><link rel="prefetch" href="/lzmblog/assets/js/23.38743dcf.js"><link rel="prefetch" href="/lzmblog/assets/js/24.6bcac6e8.js"><link rel="prefetch" href="/lzmblog/assets/js/25.28974017.js"><link rel="prefetch" href="/lzmblog/assets/js/26.d9e15335.js"><link rel="prefetch" href="/lzmblog/assets/js/27.8a39c8f2.js"><link rel="prefetch" href="/lzmblog/assets/js/28.a01661e8.js"><link rel="prefetch" href="/lzmblog/assets/js/29.a4a5406a.js"><link rel="prefetch" href="/lzmblog/assets/js/3.0e874f07.js"><link rel="prefetch" href="/lzmblog/assets/js/30.355f61f5.js"><link rel="prefetch" href="/lzmblog/assets/js/31.4e589136.js"><link rel="prefetch" href="/lzmblog/assets/js/32.0a74b181.js"><link rel="prefetch" href="/lzmblog/assets/js/33.1f0a784e.js"><link rel="prefetch" href="/lzmblog/assets/js/34.13798fc1.js"><link rel="prefetch" href="/lzmblog/assets/js/35.ce17e3ed.js"><link rel="prefetch" href="/lzmblog/assets/js/36.bafc423d.js"><link rel="prefetch" href="/lzmblog/assets/js/37.25f39385.js"><link rel="prefetch" href="/lzmblog/assets/js/38.c4bf83e1.js"><link rel="prefetch" href="/lzmblog/assets/js/39.1c904ce9.js"><link rel="prefetch" href="/lzmblog/assets/js/4.393c1c4d.js"><link rel="prefetch" href="/lzmblog/assets/js/5.f28696c6.js"><link rel="prefetch" href="/lzmblog/assets/js/6.22e81d8d.js"><link rel="prefetch" href="/lzmblog/assets/js/8.bfecf23e.js"><link rel="prefetch" href="/lzmblog/assets/js/9.3b6d93a9.js">
+    <link rel="stylesheet" href="/lzmblog/assets/css/0.styles.34e16441.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="global-layout" data-v-7f2e4136><header class="header-container" style="background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:scroll;background-image:url(/lzmblog/post-bg.jpeg);" data-v-93921ff8 data-v-7f2e4136><nav class="navbar" style="position:absolute;opacity:1;transition:all 0.5s ease-in-out;" data-v-93921ff8><a href="/lzmblog/" class="navbar-link router-link-active">
+    Lovers Blog
+  </a> <ul class="navbar-links"><li><a href="/lzmblog/" class="router-link-active">
+        HOME
+      </a></li><li><a href="/lzmblog/about/">
+        ABOUT
+      </a></li><li><a href="/lzmblog/tags/">
+        TAGS
+      </a></li></ul> <div id="nav-icon"><span></span><span></span><span></span></div></nav> <div class="header-title" data-v-93921ff8 data-v-93921ff8><h1 data-v-93921ff8>js实现点击标题，内容在同一窗口显示（隐藏与显示）</h1> <p data-v-93921ff8></p></div></header> <div class="container" data-v-b3fda33c data-v-7f2e4136><main class="main" style="width:60%;" data-v-b3fda33c><div class="post" data-v-b3fda33c data-v-b3fda33c><article class="main-div"><div class="post-content content content__default"><h2 id="js实现点击标题-内容在同一窗口显示-隐藏与显示"><a href="#js实现点击标题-内容在同一窗口显示-隐藏与显示" class="header-anchor">#</a> js实现点击标题，内容在同一窗口显示（隐藏与显示）</h2> <p>整体代码如下 ：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token operator">&lt;</span><span class="token operator">!</span>doctype html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html<span class="token operator">&gt;</span>
+
+	<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>meta <span class="token assign-left variable">charset</span><span class="token operator">=</span><span class="token string">&quot;utf-8&quot;</span><span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>xiaoliuliu<span class="token operator">&lt;</span>/title<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>link <span class="token assign-left variable">rel</span><span class="token operator">=</span><span class="token string">&quot;stylesheet&quot;</span> <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;css/xiaoliu.css&quot;</span><span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>/head<span class="token operator">&gt;</span>
+
+	<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+
+		<span class="token operator">&lt;</span>header <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;head bg-orange&quot;</span><span class="token operator">&gt;</span>
+			
+			<span class="token operator">&lt;</span>nav <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;center-width&quot;</span><span class="token operator">&gt;</span>
+				<span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;#&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;nav-picture active&quot;</span><span class="token operator">&gt;</span>图片<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span>
+				<span class="token operator">&lt;</span>a <span class="token assign-left variable">href</span><span class="token operator">=</span><span class="token string">&quot;#&quot;</span> <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;nav-article&quot;</span><span class="token operator">&gt;</span>文章<span class="token operator">&lt;</span>/a<span class="token operator">&gt;</span>
+			<span class="token operator">&lt;</span>/nav<span class="token operator">&gt;</span>
+			
+		<span class="token operator">&lt;</span>/header<span class="token operator">&gt;</span>
+
+		<span class="token operator">&lt;</span>div <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;body center-width&quot;</span><span class="token operator">&gt;</span>
+
+			<span class="token operator">&lt;</span>section <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;image&quot;</span><span class="token operator">&gt;</span>
+
+				姓名：<span class="token operator">&lt;</span>input <span class="token assign-left variable">type</span><span class="token operator">=</span><span class="token string">&quot;text&quot;</span> <span class="token assign-left variable">name</span><span class="token operator">=</span><span class="token string">&quot;&quot;</span> <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;&quot;</span> <span class="token assign-left variable">value</span><span class="token operator">=</span><span class="token string">&quot;&quot;</span> /<span class="token operator">&gt;</span>
+
+			<span class="token operator">&lt;</span>/section<span class="token operator">&gt;</span>
+
+			<span class="token operator">&lt;</span>section <span class="token assign-left variable">class</span><span class="token operator">=</span><span class="token string">&quot;article&quot;</span><span class="token operator">&gt;</span>
+
+				<span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>我叫111,你知道了吗？<span class="token operator">&lt;</span>/p<span class="token operator">&gt;</span>
+				<span class="token operator">&lt;</span>span <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;shuoming&quot;</span><span class="token operator">&gt;</span>
+					显然，这个只是实现了点击时，内容在同一画面进行切换，原理就是隐藏与显示。而并没有实现点击同一个
+				<span class="token operator">&lt;</span>/span<span class="token operator">&gt;</span>
+			<span class="token operator">&lt;</span>/section<span class="token operator">&gt;</span>
+			
+		<span class="token operator">&lt;</span>/div<span class="token operator">&gt;</span>
+
+		<span class="token operator">&lt;</span>script <span class="token assign-left variable">src</span><span class="token operator">=</span><span class="token string">&quot;js/jquery-2.1.4.min.js&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>/script<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+			<span class="token variable"><span class="token variable">$(</span>'.head .center-width a'<span class="token variable">)</span></span>.click<span class="token punctuation">(</span><span class="token function-name function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				var this_ <span class="token operator">=</span> <span class="token variable"><span class="token variable">$(</span>this<span class="token variable">)</span></span><span class="token punctuation">;</span>
+				if<span class="token punctuation">(</span><span class="token operator">!</span>this_.hasClass<span class="token punctuation">(</span><span class="token string">'active'</span><span class="token punctuation">))</span> <span class="token punctuation">{</span>
+					<span class="token variable"><span class="token variable">$(</span>'.head .center-width .active'<span class="token variable">)</span></span>.removeClass<span class="token punctuation">(</span><span class="token string">'active'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					this_.addClass<span class="token punctuation">(</span><span class="token string">'active'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					if<span class="token punctuation">(</span>this_.hasClass<span class="token punctuation">(</span><span class="token string">'nav-picture'</span><span class="token punctuation">))</span> <span class="token punctuation">{</span>
+						<span class="token variable"><span class="token variable">$(</span>'.body .article'<span class="token variable">)</span></span>.hide<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+						<span class="token variable"><span class="token variable">$(</span>'.body .image'<span class="token variable">)</span></span>.show<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+						<span class="token variable"><span class="token variable">$(</span>'.body .image'<span class="token variable">)</span></span>.hide<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+						<span class="token variable"><span class="token variable">$(</span>'.body .article'<span class="token variable">)</span></span>.show<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token punctuation">}</span>
+				<span class="token punctuation">}</span>
+			<span class="token punctuation">}</span><span class="token punctuation">)</span>
+		<span class="token operator">&lt;</span>/script<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>/body<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>/html<span class="token operator">&gt;</span>
+
+</code></pre></div><p>注意：由于js代码与html中个别id已相互对应，如要修改，对应的js代码也要修改，否则不会有效果，在这个标准框架内，可自行添加内容</p> <p>css代码如下：</p> <div class="language-css extra-class"><pre class="language-css"><code>
+<span class="token selector">*</span> <span class="token punctuation">{</span>
+<span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">body</span> <span class="token punctuation">{</span>
+<span class="token property">background-color</span><span class="token punctuation">:</span> #f9eee6<span class="token punctuation">;</span>
+<span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token property">font-size</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+<span class="token property">min-width</span><span class="token punctuation">:</span> 840px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.center-width</span> <span class="token punctuation">{</span>
+<span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+<span class="token property">width</span><span class="token punctuation">:</span> 840px <span class="token punctuation">;</span>
+<span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span>
+<span class="token property">min-width</span><span class="token punctuation">:</span> 840px <span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 1400px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+<span class="token selector">.center-width</span> <span class="token punctuation">{</span>
+<span class="token property">width</span><span class="token punctuation">:</span> 1200px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.bg-orange</span><span class="token punctuation">{</span>
+<span class="token property">background-color</span><span class="token punctuation">:</span> #ffa366<span class="token punctuation">;</span>
+<span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token selector">.head</span><span class="token punctuation">{</span>
+<span class="token property">height</span><span class="token punctuation">:</span> 54px <span class="token punctuation">;</span>
+<span class="token property">line-height</span><span class="token punctuation">:</span> 54px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token selector">.body</span> <span class="token punctuation">{</span>
+<span class="token property">background-color</span><span class="token punctuation">:</span> #fefefe<span class="token punctuation">;</span> 
+<span class="token property">min-height</span><span class="token punctuation">:</span> 500px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token selector">.footer</span> <span class="token punctuation">{</span>
+<span class="token property">line-height</span><span class="token punctuation">:</span> 34px<span class="token punctuation">;</span>
+<span class="token property">font-size</span><span class="token punctuation">:</span> 13px<span class="token punctuation">;</span>
+<span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/*页眉部分*/</span>
+    <span class="token selector">.head &gt; nav a</span> <span class="token punctuation">{</span>
+        <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+        <span class="token property">padding</span><span class="token punctuation">:</span> 0 10px<span class="token punctuation">;</span>
+        <span class="token property">flex-shrink</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span>
+        <span class="token property">color</span><span class="token punctuation">:</span> #fefefe<span class="token punctuation">;</span>
+        <span class="token property">text-decoration</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">.head &gt; nav a.active</span> <span class="token punctuation">{</span>
+        <span class="token property">background-color</span><span class="token punctuation">:</span> #f9eee6<span class="token punctuation">;</span>
+        <span class="token property">color</span><span class="token punctuation">:</span> #666；
+    <span class="token punctuation">}</span>
+    <span class="token selector">.head &gt; nav a:hover</span> <span class="token punctuation">{</span>
+        <span class="token property">color</span><span class="token punctuation">:</span> #444<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">.head &gt; nav a.active:hover</span> <span class="token punctuation">{</span>
+        <span class="token property">color</span><span class="token punctuation">:</span> #ffa366<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/*图片模块*/</span>
+    <span class="token selector">img</span> <span class="token punctuation">{</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">/*文章模块*/</span>
+    <span class="token selector">.article</span> <span class="token punctuation">{</span>
+        <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">&quot;cursive&quot;</span><span class="token punctuation">;</span>
+        <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.article p</span> <span class="token punctuation">{</span>
+        <span class="token property">padding</span><span class="token punctuation">:</span> 0 120px<span class="token punctuation">;</span>
+        <span class="token property">letter-spacing</span><span class="token punctuation">:</span> 1px<span class="token punctuation">;</span>
+        <span class="token property">line-height</span><span class="token punctuation">:</span> 24px<span class="token punctuation">;</span>
+        <span class="token property">text-indent</span><span class="token punctuation">:</span> 32px<span class="token punctuation">;</span>
+        <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    
+</code></pre></div></div></article> <div class="main-div vssue"><!----></div></div></main> <aside class="aside" data-v-b3fda33c data-v-b3fda33c><div class="info-card main-div" data-v-1311ce9e data-v-b3fda33c><div class="info-card-header" style="background-size:cover;background-repeat:no-repeat;background-position:center;background-attachment:scroll;background-image:url(/lzmblog/me.png);" data-v-1311ce9e><img src="/lzmblog/logo.jpg" alt="lzmlovers" class="info-avatar" data-v-1311ce9e></div> <div class="info-card-body" data-v-1311ce9e><section class="info-name" data-v-1311ce9e>
+      lzmlovers
+    </section> <section class="info-desc" data-v-1311ce9e>Tomorrow will be better<br/>明天会更好</section> <section class="info-contact" data-v-1311ce9e><section data-v-1311ce9e><span data-v-1311ce9e data-v-1311ce9e><svg class="icon" style="font-size:1em;" data-v-1311ce9e data-v-1311ce9e><use xlink:href="#icon-location" data-v-1311ce9e data-v-1311ce9e></use></svg><span class="info-text" data-v-1311ce9e data-v-1311ce9e>
+          YongZhou, China
+        </span></span></section> <!----> <section data-v-1311ce9e><span data-v-1311ce9e data-v-1311ce9e><svg class="icon" style="font-size:1em;" data-v-1311ce9e data-v-1311ce9e><use xlink:href="#icon-email" data-v-1311ce9e data-v-1311ce9e></use></svg><span class="info-text" data-v-1311ce9e data-v-1311ce9e>
+          2095793572@qq.com
+        </span></span></section></section></div> <div class="info-card-footer" data-v-1311ce9e><p class="footer-sns-link" data-v-1311ce9e><a target="_blank" href="https://blog.csdn.net/qq_44760912" class="sns-link" data-v-1311ce9e><span class="sns-icon" data-v-1311ce9e data-v-1311ce9e><svg class="icon" style="font-size:35px;" data-v-1311ce9e data-v-1311ce9e><use xlink:href="#icon-csdn" data-v-1311ce9e data-v-1311ce9e></use></svg></span></a><a target="_blank" href="https://weibo.com/u/7747087955" class="sns-link" data-v-1311ce9e><span class="sns-icon" data-v-1311ce9e data-v-1311ce9e><svg class="icon" style="font-size:35px;" data-v-1311ce9e data-v-1311ce9e><use xlink:href="#icon-weibo" data-v-1311ce9e data-v-1311ce9e></use></svg></span></a><a target="_blank" href="https://www.zhihu.com/people/xiao-zhu-wen-wen-ti" class="sns-link" data-v-1311ce9e><span class="sns-icon" data-v-1311ce9e data-v-1311ce9e><svg class="icon" style="font-size:35px;" data-v-1311ce9e data-v-1311ce9e><use xlink:href="#icon-zhihu" data-v-1311ce9e data-v-1311ce9e></use></svg></span></a><a target="_blank" href="https://github.com/git123hub121" class="sns-link" data-v-1311ce9e><span class="sns-icon" data-v-1311ce9e data-v-1311ce9e><svg class="icon" style="font-size:35px;" data-v-1311ce9e data-v-1311ce9e><use xlink:href="#icon-github" data-v-1311ce9e data-v-1311ce9e></use></svg></span></a></p></div></div> <div class="post-toc main-div aside-toc" style="position:relative;top:0;width:0px;" data-v-b3fda33c><h4>- CATALOG</h4> <div class="post-nav-toc"><ul><li><a href="/lzmblog/posts/2019/11/13/js%E5%AE%9E%E7%8E%B0%E7%82%B9%E5%87%BB%E6%A0%87%E9%A2%98-%E5%86%85%E5%AE%B9%E5%9C%A8%E5%90%8C%E4%B8%80%E7%AA%97%E5%8F%A3%E6%98%BE%E7%A4%BA-%E9%9A%90%E8%97%8F%E4%B8%8E%E6%98%BE%E7%A4%BA.html#js实现点击标题-内容在同一窗口显示-隐藏与显示">js实现点击标题，内容在同一窗口显示（隐藏与显示）</a></li></ul></div></div></aside></div> <footer class="footer" data-v-7f2e4136><p class="footer-sns-link"><a target="_blank" href="https://blog.csdn.net/qq_44760912" class="sns-link"><span class="sns-icon"><svg class="icon" style="font-size:40px;"><use xlink:href="#icon-csdn"></use></svg></span></a><a target="_blank" href="https://weibo.com/u/7747087955" class="sns-link"><span class="sns-icon"><svg class="icon" style="font-size:40px;"><use xlink:href="#icon-weibo"></use></svg></span></a><a target="_blank" href="https://www.zhihu.com/people/xiao-zhu-wen-wen-ti" class="sns-link"><span class="sns-icon"><svg class="icon" style="font-size:40px;"><use xlink:href="#icon-zhihu"></use></svg></span></a><a target="_blank" href="https://github.com/git123hub121" class="sns-link"><span class="sns-icon"><svg class="icon" style="font-size:40px;"><use xlink:href="#icon-github"></use></svg></span></a></p> <div class="copyright"><span id="custom">Copyright &copy; Lovers Blog 2022 | <a href="https://www.vuepress.cn/" target="_blank">VuePress</a></span> <iframe src="https://ghbtns.com/github-btn.html?user=youdeliang&amp;repo=vuepress-theme-melodydl&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="80px" height="20px" class="footer-btn" style="margin-left: 2px; margin-bottom:-5px;"></iframe></div></footer></div><div class="global-ui"><!----><!----><canvas id="vuepress-canvas-ribbon"></canvas><canvas id="vuepress-canvas-cursor"></canvas><div></div><div class="kanbanniang" data-v-5775ee02><div class="banniang-container" style="display:;" data-v-5775ee02><div class="messageBox" style="right:68px;bottom:190px;display:none;" data-v-5775ee02>
+      欢迎来到 Lovers 的博客
+    </div> <div class="operation" style="right:90px;bottom:40px;display:;" data-v-5775ee02><i class="kbnfont kbn-ban-home ban-home" data-v-5775ee02></i> <i class="kbnfont kbn-ban-message message" data-v-5775ee02></i> <i class="kbnfont kbn-ban-close close" data-v-5775ee02></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-5775ee02><i class="kbnfont kbn-ban-info info" data-v-5775ee02></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:;" data-v-5775ee02></i></div> <canvas id="banniang" width="150" height="220" class="live2d" style="right:90px;bottom:-20px;opacity:0.9;" data-v-5775ee02></canvas></div> <div class="showBanNiang" style="display:none;" data-v-5775ee02>
+    看板娘
+  </div></div><APlayer audio="" fixed="true" mini="true" theme="#b7daff" loop="loop" order="list" preload="auto" volume="0.7" mutex="true" lrc-type="0" list-max-height="250" storage-name="vuepress-plugin-meting" id="aplayer-fixed"></APlayer></div></div>
+    <script src="/lzmblog/assets/js/app.f6582fa6.js" defer></script><script src="/lzmblog/assets/js/7.f579b280.js" defer></script><script src="/lzmblog/assets/js/15.5cfac5ee.js" defer></script>
+  </body>
+</html>
